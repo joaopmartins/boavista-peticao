@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boavista Decide - Petição para AG Extraordinária</title>
+    <meta name="description" content="Assina a petição para convocar uma Assembleia Geral Extraordinária no Boavista FC. Destituição da Direção, Comissão Administrativa e recuperação do clube.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Boavista Decide - Petição AG Extraordinária">
+    <meta property="og:description" content="Assina a petição para convocar uma AG Extraordinária no Boavista FC. Destituição da Direção e nomeação de Comissão Administrativa.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:locale" content="pt_PT">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bfc: {
+                            black: '#1a1a1a',
+                            white: '#f5f5f5',
+                            gold: '#d4af37'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#hero" class="flex items-center gap-3 cursor-pointer">
+                    <img src="assets/logo.png" alt="Boavista FC" class="w-10 h-10 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="w-10 h-10 bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg items-center justify-center hidden" style="display: none;">
+                        <span class="text-white font-bold text-sm">BFC</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">Boavista Decide</h1>
+                        <p class="text-xs text-gray-500">Petição para AG Extraordinária</p>
+                    </div>
+                </a>
+                <a href="#assinar" class="hidden sm:inline-flex px-4 py-2 bg-bfc-gold text-gray-900 font-bold text-sm rounded-lg hover:bg-yellow-500 transition-colors shadow-sm">
+                    Assinar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 text-gray-900 py-8 sm:py-12 border-b-4 border-bfc-gold">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-4">O Boavista precisa de uma mudança. Já.</h2>
+            <p class="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-6">
+                A 18 de Fevereiro de 2026, a Administradora de Insolvência afastou a Direção de Garrido Pereira da gestão do clube.
+                Os sócios merecem decidir o futuro do Boavista.
+            </p>
+            <a href="#assinar" class="inline-flex px-6 py-3 bg-bfc-gold text-gray-900 font-bold text-base rounded-lg hover:bg-yellow-500 transition-colors shadow-sm">
+                Assinar a Petição
+            </a>
+
+            <!-- Signature counter -->
+            <div class="mt-8 max-w-sm mx-auto">
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-1">
+                    <span><strong class="text-2xl text-bfc-gold" id="sig-count-hero">0</strong> assinaturas</span>
+                    <span>Objectivo: <strong id="sig-goal-hero">250</strong></span>
+                </div>
+                <div class="h-3 rounded-full overflow-hidden bg-gray-300">
+                    <div class="progress-fill h-full bg-bfc-gold rounded-full" id="progress-hero" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Contexto -->
+        <section id="contexto">
+            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Porquê esta petição</h2>
+
+            <!-- Red alert: Board removal -->
+            <div class="bg-red-50 rounded-xl border border-red-200 p-5 sm:p-6 mb-6">
+                <div class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-10 h-10 bg-red-100 border border-red-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-red-800 mb-2">18 de Fevereiro de 2026: Direção afastada da gestão do clube</h3>
+                        <p class="text-sm text-red-700 leading-relaxed mb-2">
+                            A Administradora de Insolvência decidiu prescindir da coadjuvação da Direção na gestão do Boavista FC,
+                            após a Direção ter falhado o depósito de 96.000 EUR (prestação aos credores) e 54.180 EUR (despesas correntes de Fevereiro).
+                        </p>
+                        <p class="text-sm text-red-700 leading-relaxed">
+                            A gestão do clube passa a ser assegurada pela Administradora de Insolvência e por pessoa a indicar,
+                            com o acordo da Comissão de Credores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fact cards -->
+            <div class="space-y-3">
+                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 border border-red-200 rounded flex items-center justify-center text-red-600 text-sm font-bold">!</div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">O clube sobrevive com donativos</p>
+                        <p class="text-xs text-gray-500">Gérard López, através de donativos, assegura as despesas correntes mensais (50.000-55.000 EUR/mês). A Direção não conseguiu garantir estes pagamentos.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-orange-100 border border-orange-200 rounded flex items-center justify-center text-orange-600 text-sm font-bold">!</div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">Modalidades em colapso</p>
+                        <p class="text-xs text-gray-500">Andebol extinto (11 equipas), futsal em desistência, clube sem equipa sénior de futebol. Dezenas de atletas ficaram sem clube.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-yellow-100 border border-yellow-200 rounded flex items-center justify-center text-yellow-600 text-sm font-bold">!</div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">Estádio do Bessa interditado</p>
+                        <p class="text-xs text-gray-500">Interditado por questões de segurança. Nenhuma equipa joga no estádio. Imediações tornaram-se ponto de venda de droga.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-gray-600 text-sm font-bold">!</div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">Credores votaram pela liquidação</p>
+                        <p class="text-xs text-gray-500">Assembleia de credores rejeitou o plano de recuperação e votou pela liquidação do clube. Pagamentos acordados não foram cumpridos.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-gray-600 text-sm font-bold">!</div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">Presidente silencioso</p>
+                        <p class="text-xs text-gray-500">Após ser afastado pela Administradora de Insolvência, Garrido Pereira não se dirigiu aos sócios. Não convocou nenhuma Assembleia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Os 3 Pontos de Trabalho -->
+        <section id="pontos">
+            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Os 3 Pontos de Trabalho</h2>
+            <p class="text-sm text-gray-500 mb-4">Pontos a incluir na ordem de trabalhos da Assembleia Geral Extraordinária:</p>
+
+            <div class="space-y-4">
+                <!-- Ponto 1 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-amber-100 border border-amber-300 rounded-lg flex items-center justify-center">
+                            <span class="text-amber-700 font-black text-lg">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Destituição da Direção</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Deliberação sobre a destituição da Direção em exercício, com fundamento na impossibilidade superveniente
+                                de exercício das respectivas funções, resultante da cessação, por decisão da Administradora de Insolvência
+                                de 18 de Fevereiro de 2026, da coadjuvação da Direção na gestão do estabelecimento do Clube, bem como na
+                                gestão que conduziu à declaração de insolvência e à perda de confiança da Administradora de Insolvência e
+                                da Comissão de Credores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ponto 2 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-amber-100 border border-amber-300 rounded-lg flex items-center justify-center">
+                            <span class="text-amber-700 font-black text-lg">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Comissão Administrativa Transitória</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Nomeação de uma Comissão Administrativa transitória para assegurar a gestão corrente do Clube
+                                até à realização de novas eleições, com fixação da respectiva composição, competências e prazo de mandato.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ponto 3 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-amber-100 border border-amber-300 rounded-lg flex items-center justify-center">
+                            <span class="text-amber-700 font-black text-lg">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Mandato de Representação e Negociação</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Atribuição de mandato à Comissão Administrativa para representar institucionalmente o Clube e dialogar
+                                com a Administradora de Insolvência, a Comissão de Credores e o Tribunal, com vista à viabilização de uma
+                                solução de recuperação ou continuidade da actividade do Boavista Futebol Clube, e fixação de prazo para a
+                                convocação de eleições para os Órgãos Sociais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Texto Integral do Requerimento -->
+        <section id="requerimento">
+            <details class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="px-5 sm:px-6 py-4 cursor-pointer font-bold text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        Texto integral do requerimento à Mesa da Assembleia Geral
+                    </span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-5 sm:px-6 pb-5 text-sm text-gray-600 leading-relaxed space-y-4 border-t border-gray-100 pt-4">
+                    <p class="font-semibold text-gray-900">
+                        Exmo. Senhor Presidente da Mesa da Assembleia Geral do Boavista Futebol Clube
+                    </p>
+                    <p>
+                        Os abaixo-assinados, sócios efectivos do Boavista Futebol Clube na plenitude dos seus direitos,
+                        ao abrigo do disposto no n.º 2 do Art.º 67.º dos Estatutos do Boavista Futebol Clube,
+                        vêm requerer a V. Exa. a convocação de uma <strong>Assembleia Geral Extraordinária</strong>,
+                        com a seguinte ordem de trabalhos:
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4 space-y-3">
+                        <p>
+                            <strong>PONTO 1</strong> - Deliberação sobre a destituição da Direção em exercício, com fundamento na
+                            impossibilidade superveniente de exercício das respectivas funções, resultante da cessação, por decisão
+                            da Administradora de Insolvência de 18 de Fevereiro de 2026, da coadjuvação da Direção na gestão do
+                            estabelecimento do Clube, bem como na gestão que conduziu à declaração de insolvência e à perda de
+                            confiança da Administradora de Insolvência e da Comissão de Credores.
+                        </p>
+                        <p>
+                            <strong>PONTO 2</strong> - Nomeação de uma Comissão Administrativa transitória para assegurar a gestão
+                            corrente do Clube até à realização de novas eleições, com fixação da respectiva composição, competências
+                            e prazo de mandato.
+                        </p>
+                        <p>
+                            <strong>PONTO 3</strong> - Atribuição de mandato à Comissão Administrativa para representar
+                            institucionalmente o Clube e dialogar com a Administradora de Insolvência, a Comissão de Credores e o
+                            Tribunal, com vista à viabilização de uma solução de recuperação ou continuidade da actividade do Boavista
+                            Futebol Clube, e fixação de prazo para a convocação de eleições para os Órgãos Sociais.
+                        </p>
+                    </div>
+                    <p>
+                        Mais declaramos que nos comprometemos a depositar na Secretaria do Clube a quantia julgada necessária para
+                        garantir as despesas inerentes à realização da Assembleia Geral Extraordinária, nos termos do n.º 2 do Art.º 67.º dos Estatutos.
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Nota: Este texto será o documento formal apresentado à MAG, acompanhado da lista de signatários.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <!-- Base Legal -->
+        <section id="base-legal">
+            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Base Legal</h2>
+
+            <div class="space-y-4">
+                <div class="bg-amber-50 border-l-4 border-bfc-gold p-4 rounded-r-lg">
+                    <p class="text-xs font-bold text-amber-800 mb-2">Art.º 67.º n.º 2 dos Estatutos do Boavista FC</p>
+                    <p class="text-sm text-amber-900 leading-relaxed italic">
+                        "A Assembleia Geral reúne extraordinariamente, em qualquer data, a requerimento de um quinto dos Sócios
+                        efectivos, na plenitude dos seus direitos, desde que no acto da entrega do requerimento provem ter depositado
+                        na Secretaria do Clube a quantia julgada necessária para garantir as despesas inerentes à realização da
+                        Assembleia Geral Extraordinária."
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="bg-white rounded-lg border border-gray-200 p-4">
+                        <p class="text-xs font-bold text-gray-500 mb-1">Art.º 58.º</p>
+                        <p class="text-sm text-gray-600">A Assembleia Geral é <strong>"a autoridade suprema do Clube"</strong>.</p>
+                    </div>
+                    <div class="bg-white rounded-lg border border-gray-200 p-4">
+                        <p class="text-xs font-bold text-gray-500 mb-1">Art.º 64.º</p>
+                        <p class="text-sm text-gray-600">A AG tem <strong>"competência ilimitada"</strong> para decidir sobre todos os assuntos de interesse para a vida do Clube.</p>
+                    </div>
+                </div>
+
+                <p class="text-xs text-gray-400">
+                    Fonte: <a href="https://boavistafc.pt/wp-content/uploads/2019/07/estatutos.pdf" target="_blank" rel="noopener noreferrer" class="text-bfc-gold hover:underline">Estatutos do Boavista Futebol Clube (PDF)</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Assinar a Petição (CTA) -->
+        <section id="assinar" class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-6 sm:p-10">
+            <div class="text-center">
+                <h2 class="text-2xl sm:text-3xl font-black mb-4">Assina a Petição</h2>
+                <p class="text-gray-300 text-sm sm:text-base max-w-lg mx-auto mb-6">
+                    Com assinaturas suficientes, a Mesa da Assembleia Geral é obrigada a convocar a AG Extraordinária.
+                    Não é um favor. É um direito estatutário.
+                </p>
+
+                <!-- Requirements -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6 text-xs text-gray-400">
+                    <span class="bg-gray-800 px-3 py-1.5 rounded-full">Sócio efectivo</span>
+                    <span class="bg-gray-800 px-3 py-1.5 rounded-full">Quotas em dia</span>
+                    <span class="bg-gray-800 px-3 py-1.5 rounded-full">Nome + N.º de sócio</span>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://docuseal.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-bfc-gold text-gray-900 font-black text-lg rounded-xl hover:bg-yellow-500 transition-colors shadow-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                    Assinar a Petição
+                </a>
+
+                <!-- Counter -->
+                <div class="mt-8 max-w-sm mx-auto">
+                    <div class="flex items-center justify-between text-sm text-gray-400 mb-1">
+                        <span><strong class="text-2xl text-bfc-gold" id="sig-count-cta">0</strong> assinaturas</span>
+                        <span>Objectivo: <strong id="sig-goal-cta">250</strong></span>
+                    </div>
+                    <div class="h-3 rounded-full overflow-hidden bg-gray-700">
+                        <div class="progress-fill h-full bg-bfc-gold rounded-full" id="progress-cta" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Privacy note -->
+                <p class="text-xs text-gray-500 mt-4">
+                    A tua assinatura é confidencial. Os dados recolhidos (nome e número de sócio) são utilizados
+                    exclusivamente para apresentação do requerimento à MAG.
+                    <a href="#privacidade" class="text-bfc-gold hover:underline">Política de dados</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Promessas -->
+        <section id="promessas">
+            <h2 class="text-xl font-bold text-gray-900 mb-1 border-l-4 border-bfc-gold pl-4">Promessas Eleitorais: O Registo</h2>
+            <p class="text-sm text-gray-500 mb-4 pl-5">O que Garrido Pereira prometeu vs o que realmente fez desde Janeiro 2025</p>
+            <div class="flex items-center gap-3 mb-3">
+                <span class="text-sm font-bold text-red-500" id="promessas-score">--</span>
+            </div>
+            <!-- Progress bar -->
+            <div class="flex gap-1 h-3 rounded-full overflow-hidden bg-gray-200 mb-1" id="promessas-bar">
+            </div>
+            <div class="flex justify-between text-xs text-gray-500 mb-4" id="promessas-bar-legend">
+            </div>
+            <!-- Promessas content -->
+            <div id="promessas-content" class="space-y-3">
+            </div>
+        </section>
+
+        <!-- Cronologia -->
+        <section id="cronologia">
+            <h2 class="text-xl font-bold text-gray-900 mb-1 border-l-4 border-bfc-gold pl-4">Cronologia do Mandato</h2>
+            <p class="text-sm text-gray-500 mb-4 pl-5">Principais acontecimentos desde Janeiro 2025</p>
+            <!-- Filter pills -->
+            <div id="cronologia-filters" class="flex flex-wrap gap-2 mb-4">
+            </div>
+            <div id="cronologia-content"></div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Perguntas Frequentes</h2>
+            <div class="space-y-3">
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>O que é esta petição?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        É um pedido formal, assinado por sócios, para que a Mesa da Assembleia Geral convoque uma AG Extraordinária
+                        com três pontos de trabalho: destituição da Direção actual, nomeação de uma Comissão Administrativa transitória,
+                        e atribuição de mandato para negociar com a Administradora de Insolvência e os credores.
+                        Está fundamentado no Art.º 67.º n.º 2 dos Estatutos do Boavista FC.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>Quem pode assinar?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Sócios efectivos do Boavista FC que estejam na plenitude dos seus direitos (Art.º 31.º dos Estatutos),
+                        ou seja, com as quotas em dia e sem penalidades pendentes.
+                        Se não tens as quotas em dia, podes regularizar a tua situação junto do clube e depois assinar.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>Quantas assinaturas são necessárias?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Os Estatutos exigem um quinto (20%) dos sócios efectivos com as quotas em dia.
+                        O número exacto depende do total de sócios activos, que só o clube conhece.
+                        O nosso objectivo de 250 assinaturas visa garantir margem suficiente.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>A MAG é obrigada a convocar a AG?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Sim, desde que o requerimento cumpra os requisitos estatutários: número suficiente de assinaturas
+                        de sócios elegíveis e depósito da quantia necessária para as despesas da AG.
+                        É um direito dos sócios, não uma concessão.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>O que acontece após a destituição?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        É nomeada uma Comissão Administrativa transitória (Ponto 2 da petição) com um mandato limitado e objectivos claros:
+                        assegurar o funcionamento diário do clube, negociar com os credores, e convocar novas eleições num prazo definido.
+                        Não é uma solução mágica, mas é o caminho estatutário, legítimo e democrático.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>E se a MAG recusar?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Se a MAG recusar um requerimento que cumpra todos os requisitos estatutários,
+                        os sócios podem recorrer aos meios legais previstos na lei civil e nos estatutos.
+                        Mas o primeiro passo é reunir as assinaturas.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>A minha assinatura digital é válida?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        As assinaturas são recolhidas através do DocuSeal, uma plataforma de assinatura digital que gera
+                        documentos assinados com registo de data, hora, IP e identificação do signatário.
+                        A legislação portuguesa (Decreto-Lei n.º 12/2021 e Regulamento eIDAS da UE) reconhece a validade
+                        de assinaturas electrónicas, e os estatutos do BFC não especificam que as assinaturas tenham de ser
+                        manuscritas. A petição será acompanhada do documento gerado pelo DocuSeal com todas as assinaturas e
+                        respectivos metadados de verificação, conferindo-lhe robustez jurídica perante eventual impugnação.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>Que dados recolhem?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Apenas o teu nome completo e número de sócio. Estes dados são necessários para que a MAG possa
+                        verificar que os signatários são sócios elegíveis. O email, se fornecido, é opcional e serve apenas para
+                        te enviar confirmação da assinatura. Ver <a href="#privacidade" class="text-bfc-gold hover:underline">Protecção de Dados</a>.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>Retêm os meus dados depois da entrega?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Não. Após a entrega do requerimento à MAG, os dados pessoais recolhidos serão eliminados.
+                        Não mantemos bases de dados de sócios. Não partilhamos dados com terceiros.
+                        Ver <a href="#privacidade" class="text-bfc-gold hover:underline">Protecção de Dados</a>.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>Quem está por trás disto?</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Esta é uma iniciativa independente de um adepto do Boavista FC.
+                        Não representa nenhum grupo, facção ou candidatura.
+                        Não tem qualquer afiliação com o Boavista FC ou com os seus órgãos sociais.
+                        Existe porque um Boavisteiro acredita que os sócios têm o direito de decidir o futuro do seu clube.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <summary class="px-4 py-3 cursor-pointer font-medium text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
+                        <span>Não confio em nenhuma candidatura alternativa.</span>
+                        <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-sm text-gray-600">
+                        Esta petição não é sobre candidaturas. É sobre o direito dos sócios de decidirem.
+                        A Comissão Administrativa é transitória, não é uma candidatura.
+                        As eleições serão convocadas num prazo definido, e aí cada sócio votará em quem entender.
+                        Assinar esta petição não significa apoiar nenhum candidato. Significa exigir que os sócios possam decidir.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- Protecção de Dados -->
+        <section id="privacidade">
+            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Protecção de Dados</h2>
+            <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
+                <div class="space-y-4 text-sm text-gray-600 leading-relaxed">
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Responsável pelo tratamento</h3>
+                        <p>O responsável pelo tratamento dos dados pessoais é o promotor desta iniciativa, actuando a título individual e independente.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Dados recolhidos</h3>
+                        <p>Nome completo e número de sócio do Boavista FC. Opcionalmente, endereço de email para confirmação.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Finalidade</h3>
+                        <p>Os dados são recolhidos exclusivamente para efeitos de apresentação do requerimento de convocação de Assembleia Geral Extraordinária
+                        à Mesa da Assembleia Geral do Boavista Futebol Clube, nos termos do Art.º 67.º n.º 2 dos Estatutos.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Conservação dos dados</h3>
+                        <p>Os dados pessoais serão conservados apenas durante o período estritamente necessário para a apresentação do requerimento.
+                        Após a entrega à MAG e confirmação de recepção, todos os dados pessoais serão eliminados no prazo máximo de 30 dias.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Partilha com terceiros</h3>
+                        <p>Os dados não serão partilhados com terceiros, com excepção da entrega do requerimento à Mesa da Assembleia Geral,
+                        que constitui a finalidade exclusiva da recolha. Os dados não serão utilizados para fins comerciais, de marketing,
+                        ou quaisquer outros fins não directamente relacionados com a petição.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Plataforma de assinatura</h3>
+                        <p>As assinaturas são recolhidas através da plataforma DocuSeal. Os dados processados pela plataforma estão sujeitos
+                        à respectiva política de privacidade. O promotor desta iniciativa não tem acesso a dados para além dos estritamente
+                        necessários (nome, número de sócio, e metadados de assinatura).</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Direitos do titular</h3>
+                        <p>Nos termos do Regulamento Geral sobre a Protecção de Dados (Regulamento (UE) 2016/679), o titular dos dados tem direito
+                        de acesso, rectificação, apagamento e oposição ao tratamento dos seus dados pessoais. Para exercer estes direitos,
+                        contactar: <strong class="text-gray-900">[EMAIL_PLACEHOLDER]</strong>.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Segurança</h3>
+                        <p>São adoptadas medidas técnicas e organizativas adequadas para proteger os dados pessoais contra acesso não autorizado,
+                        perda ou destruição. O site é servido exclusivamente via HTTPS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-500">
+                <p>Feito com <span class="text-bfc-black">&#9829;</span> por um Boavisteiro</p>
+                <a href="https://boavistafc.pt/wp-content/uploads/2019/07/estatutos.pdf" target="_blank" rel="noopener noreferrer" class="text-bfc-gold hover:underline text-xs">Estatutos do BFC (PDF)</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+                <p class="text-xs text-gray-400 text-center leading-relaxed">
+                    <strong>Aviso Legal:</strong> Este site não é oficial do Boavista Futebol Clube.
+                    É uma iniciativa independente de um adepto, sem qualquer afiliação oficial com o clube,
+                    os seus órgãos sociais, ou qualquer grupo, facção ou candidatura.
+                    Os dados apresentados são recolhidos de fontes públicas e podem conter erros.
+                    Este projecto não tem fins lucrativos e destina-se exclusivamente à recolha de assinaturas
+                    para apresentação de um requerimento estatutário à Mesa da Assembleia Geral.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

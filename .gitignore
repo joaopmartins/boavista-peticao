@@ -1,0 +1,4 @@
+_working/
+*.pdf
+.DS_Store
+node_modules/
