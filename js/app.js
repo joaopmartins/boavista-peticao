@@ -1,4 +1,4 @@
-// Boavista Decide - Petition App
+// Boavista Resiste - Petition App
 
 let promessasData = null;
 let cronologiaData = null;
@@ -151,18 +151,19 @@ function renderPromessas() {
         cat.promessas.forEach(p => catCounts[p.status]++);
 
         const summary = document.createElement('summary');
-        summary.className = 'px-4 py-3 cursor-pointer hover:bg-gray-50 transition-colors flex items-center justify-between';
+        summary.className = 'px-4 py-3 cursor-pointer hover:bg-gray-50 transition-colors flex items-center justify-between gap-2';
         summary.innerHTML = `
-            <span class="font-medium text-sm">
+            <span class="font-medium text-sm flex-1">
                 <span class="mr-1">${cat.icon}</span> ${cat.nome}
                 <span class="text-gray-400 text-xs ml-1">(${cat.promessas.length})</span>
             </span>
-            <span class="flex gap-1 text-xs">
+            <span class="flex gap-1 text-xs flex-shrink-0">
                 ${catCounts.cumprida ? `<span class="bg-green-100 text-green-700 px-1.5 py-0.5 rounded">${catCounts.cumprida} \u2705</span>` : ''}
                 ${catCounts.parcial ? `<span class="bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded">${catCounts.parcial} \uD83D\uDFE1</span>` : ''}
                 ${catCounts.nao_cumprida ? `<span class="bg-gray-100 text-gray-700 px-1.5 py-0.5 rounded">${catCounts.nao_cumprida} \u274C</span>` : ''}
                 ${catCounts.oposto ? `<span class="bg-red-100 text-red-700 px-1.5 py-0.5 rounded">${catCounts.oposto} \uD83D\uDC80</span>` : ''}
             </span>
+            <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         `;
         catDiv.appendChild(summary);
 
@@ -186,6 +187,10 @@ function renderPromessas() {
         catDiv.appendChild(list);
         content.appendChild(catDiv);
     });
+
+    // Open first category by default
+    const first = content.querySelector('details');
+    if (first) first.open = true;
 }
 
 // Cronologia
