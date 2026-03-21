@@ -42,7 +42,7 @@ function setupSmoothScroll() {
 // Counter
 async function loadCounter() {
     try {
-        const res = await fetch('data/counter.json');
+        const res = await fetch('https://boavista-peticao-counter.quiet-unit-02b2.workers.dev');
         if (res.ok) {
             counterData = await res.json();
         }
