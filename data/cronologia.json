@@ -215,6 +215,24 @@
             "titulo": "Requerimento documenta falhas e mudança de gestão",
             "descricao": "Administradora de Insolvência apresenta requerimento ao Tribunal de Comércio de V.N. de Gaia documentando os incumprimentos da Direção, os donativos externos e o afastamento da Direção da gestão.",
             "tipo": "financas"
+        },
+        {
+            "data": "2026-03-01",
+            "titulo": "Garrido fala à imprensa, ignora os sócios",
+            "descricao": "Garrido Pereira dá entrevista a desvalorizar o afastamento e a culpar terceiros pela dívida da SAD ao clube (~9M€). Continua sem se dirigir aos sócios por comunicado ou Assembleia.",
+            "tipo": "governanca"
+        },
+        {
+            "data": "2026-03-09",
+            "titulo": "JPN documenta abandono total do Bessa",
+            "descricao": "Reportagem 'Pantera ao Abandono' do JPN revela que jornalistas entraram no estádio 3 vezes sem serem abordados. Sem segurança, sem vigilância, sem manutenção.",
+            "tipo": "estadio"
+        },
+        {
+            "data": "2026-03-10",
+            "titulo": "Leilão de bens do clube em curso",
+            "descricao": "Apartamentos e garagens junto ao Bessa postos a leilão no âmbito do processo de insolvência. Prazo de propostas até 10 de Abril de 2026.",
+            "tipo": "financas"
         }
     ]
 }

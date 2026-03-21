@@ -1,4 +1,4 @@
-// Boavista FC - Petition App
+// Unidos Pelo Boavista - Petition App
 
 let promessasData = null;
 let cronologiaData = null;

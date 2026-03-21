@@ -1,4 +1,4 @@
-# Boavista FC
+# Unidos Pelo Boavista
 
 Petição para convocação de uma Assembleia Geral Extraordinária do Boavista Futebol Clube.
 
