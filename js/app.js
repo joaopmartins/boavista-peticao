@@ -221,7 +221,7 @@ function renderCronologia() {
     const content = document.getElementById('cronologia-content');
     if (!content) return;
 
-    const eventos = cronologiaData.eventos.sort((a, b) => a.data.localeCompare(b.data));
+    const eventos = cronologiaData.eventos.sort((a, b) => b.data.localeCompare(a.data));
 
     renderCronologiaTimeline(content, eventos);
     setupCronologiaFilters(eventos);
