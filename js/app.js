@@ -54,6 +54,7 @@ async function loadCounter() {
 
 function updateCounterUI() {
     const pct = Math.min((counterData.current / counterData.goal) * 100, 100);
+    const goalReached = counterData.current >= counterData.goal;
 
     // Update all counter elements
     document.querySelectorAll('[id^="sig-count-"]').forEach(el => {
@@ -65,6 +66,27 @@ function updateCounterUI() {
     document.querySelectorAll('[id^="progress-"]').forEach(el => {
         el.style.width = pct + '%';
     });
+
+    if (goalReached) {
+        // Show banner
+        const banner = document.getElementById('goal-banner');
+        if (banner) banner.classList.remove('hidden');
+
+        // Show estado section
+        const estado = document.getElementById('estado');
+        if (estado) estado.classList.remove('hidden');
+
+        // Update goal text
+        document.querySelectorAll('[id^="goal-text-"]').forEach(el => {
+            el.innerHTML = '<strong class="text-green-500">Meta atingida! Continua a assinar.</strong>';
+        });
+
+        // Update CTA text
+        const ctaText = document.getElementById('cta-text');
+        if (ctaText) {
+            ctaText.innerHTML = 'Atingimos a meta de 250 assinaturas. A petição vai ser entregue à Mesa da Assembleia Geral. Mas cada assinatura adicional reforça a legitimidade do requerimento. <strong class="text-white">Assina e partilha.</strong><br><br><span class="text-amber-300">Importante: para que a tua assinatura conte, tens de ter pelo menos a quota de Março 2026 paga.</span>';
+        }
+    }
 }
 
 // Promessas

@@ -70,6 +70,14 @@
         </div>
     </header>
 
+    <!-- Goal Reached Banner (hidden by default) -->
+    <div id="goal-banner" class="hidden bg-gradient-to-r from-amber-600 to-yellow-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center gap-3 text-sm font-semibold">
+            <span>Meta atingida! Continua a assinar para reforçar o requerimento. Garante que tens a quota de Março paga para a tua assinatura ser válida.</span>
+            <a href="#estado" class="underline hover:no-underline whitespace-nowrap">Ver próximos passos</a>
+        </div>
+    </div>
+
     <!-- Hero -->
     <section id="hero" class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 text-gray-900 py-8 sm:py-12 border-b-4 border-bfc-gold">
         <div class="max-w-4xl mx-auto px-4 text-center">
@@ -86,7 +94,7 @@
             <div class="mt-8 max-w-sm mx-auto">
                 <div class="flex items-center justify-between text-sm text-gray-500 mb-1">
                     <span><strong class="text-2xl text-bfc-gold" id="sig-count-hero">0</strong> assinaturas</span>
-                    <span>Objectivo: <strong id="sig-goal-hero">250</strong></span>
+                    <span id="goal-text-hero">Objectivo: <strong id="sig-goal-hero">250</strong></span>
                 </div>
                 <div class="h-3 rounded-full overflow-hidden bg-gray-300">
                     <div class="progress-fill h-full bg-bfc-gold rounded-full" id="progress-hero" style="width: 0%"></div>
@@ -97,6 +105,45 @@
 
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Estado da Petição (hidden by default, shown when goal reached) -->
+        <section id="estado" class="hidden">
+            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Estado da Petição</h2>
+            <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
+                <div class="relative pl-6 border-l-2 border-gray-200 space-y-6">
+                    <!-- Step 1: Done -->
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-green-500 border-2 border-white"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-semibold text-gray-900">Recolha de assinaturas</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Concluído</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Meta de 250 assinaturas atingida! Cada assinatura adicional reforça a legitimidade do requerimento.</p>
+                    </div>
+                    <!-- Step 2: Next -->
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-bfc-gold border-2 border-white animate-pulse"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-semibold text-gray-900">Entrega do requerimento à Mesa da Assembleia Geral (MAG)</span>
+                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium">Próximo passo</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Nos próximos dias, o requerimento formal será entregue na Secretaria do Clube, dirigido à Mesa da Assembleia Geral, acompanhado da lista de signatários.</p>
+                    </div>
+                    <!-- Step 3: Pending -->
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-gray-300 border-2 border-white"></div>
+                        <span class="text-sm font-semibold text-gray-400">Resposta da MAG</span>
+                        <p class="text-xs text-gray-400 mt-1">Após a recepção do requerimento e verificação dos pressupostos, a MAG convoca a Assembleia Geral Extraordinária.</p>
+                    </div>
+                    <!-- Step 4: Pending -->
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-gray-300 border-2 border-white"></div>
+                        <span class="text-sm font-semibold text-gray-400">Assembleia Geral Extraordinária</span>
+                        <p class="text-xs text-gray-400 mt-1">Os sócios votam sobre a destituição da Direção, nomeação da Comissão Administrativa e mandato de negociação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Contexto -->
         <section id="contexto">
@@ -324,7 +371,7 @@
         <section id="assinar" class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-6 sm:p-10">
             <div class="text-center">
                 <h2 class="text-2xl sm:text-3xl font-black mb-4">Assina a Petição</h2>
-                <p class="text-gray-300 text-sm sm:text-base max-w-lg mx-auto mb-6">
+                <p id="cta-text" class="text-gray-300 text-sm sm:text-base max-w-lg mx-auto mb-6">
                     Os bens do clube estão a ser leiloados. O Bessa está ao abandono. A cada dia que passa, há menos Boavista para salvar.
                     Com assinaturas suficientes, a Mesa da Assembleia Geral é obrigada a convocar a Assembleia Geral Extraordinária.
                 </p>
@@ -350,7 +397,7 @@
                 <div class="mt-8 max-w-sm mx-auto">
                     <div class="flex items-center justify-between text-sm text-gray-400 mb-1">
                         <span><strong class="text-2xl text-bfc-gold" id="sig-count-cta">0</strong> assinaturas</span>
-                        <span>Objectivo: <strong id="sig-goal-cta">250</strong></span>
+                        <span id="goal-text-cta">Objectivo: <strong id="sig-goal-cta">250</strong></span>
                     </div>
                     <div class="h-3 rounded-full overflow-hidden bg-gray-700">
                         <div class="progress-fill h-full bg-bfc-gold rounded-full" id="progress-cta" style="width: 0%"></div>
