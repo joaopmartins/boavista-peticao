@@ -78,14 +78,8 @@ function updateCounterUI() {
 
         // Update goal text
         document.querySelectorAll('[id^="goal-text-"]').forEach(el => {
-            el.innerHTML = '<strong class="text-green-500">Meta atingida! Continua a assinar.</strong>';
+            el.innerHTML = '<strong class="text-green-500">Meta atingida.</strong>';
         });
-
-        // Update CTA text
-        const ctaText = document.getElementById('cta-text');
-        if (ctaText) {
-            ctaText.innerHTML = 'Atingimos a meta de 250 assinaturas. A petição vai ser entregue à Mesa da Assembleia Geral. Mas cada assinatura adicional reforça a legitimidade do requerimento. <strong class="text-white">Assina e partilha.</strong><br><br><span class="text-amber-300">Importante: para que a tua assinatura conte, tens de ter pelo menos a quota de Março 2026 paga.</span>';
-        }
     }
 }
 
