@@ -257,6 +257,12 @@
             "titulo": "Requerimento entregue à Mesa da Assembleia Geral",
             "descricao": "Entregue na Secretaria do Clube o requerimento de convocação de Assembleia Geral Extraordinária, subscrito por 270 sócios efectivos, acompanhado de lista de signatários e cópias individuais das 270 assinaturas digitais (eIDAS). Solicitada à MAG a validação das assinaturas em 5 dias úteis e convocação da AG em 8 dias úteis após depósito.",
             "tipo": "governanca"
+        },
+        {
+            "data": "2026-04-30",
+            "titulo": "Reunião de validação com Secretaria e MAG",
+            "descricao": "Reunião na Secretaria do Boavista FC, das 10h08 às 11h15, entre representantes da Secretaria do Clube, da Mesa da Assembleia Geral e do grupo subscritor. A Secretaria, no exercício da sua competência exclusiva de validação, reconheceu 140 das 270 assinaturas. As restantes 130 não foram reconhecidas, sobretudo por quotas em atraso à data da entrega do requerimento (23 de Abril). Foi solicitada a comunicação do número total de sócios elegíveis e do quinto exigido pelos Estatutos, prevista para 4 de Maio. Ficou acordada a constituição de uma comissão conjunta entre a MAG e o grupo subscritor para articular a realização da Assembleia Geral Extraordinária.",
+            "tipo": "governanca"
         }
     ]
 }
