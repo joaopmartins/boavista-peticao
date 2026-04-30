@@ -2,7 +2,6 @@
 
 let promessasData = null;
 let cronologiaData = null;
-let counterData = { current: 0, goal: 250 };
 
 // Initialize
 document.addEventListener('DOMContentLoaded', init);
@@ -11,7 +10,6 @@ async function init() {
     updateStickyOffsets();
     window.addEventListener('resize', updateStickyOffsets);
     setupSmoothScroll();
-    await loadCounter();
     await loadPromessas();
     await loadCronologia();
 }
@@ -37,50 +35,6 @@ function setupSmoothScroll() {
             }
         });
     });
-}
-
-// Counter
-async function loadCounter() {
-    try {
-        const res = await fetch('https://boavista-peticao-counter.quiet-unit-02b2.workers.dev');
-        if (res.ok) {
-            counterData = await res.json();
-        }
-    } catch (e) {
-        console.error('Counter load error:', e);
-    }
-    updateCounterUI();
-}
-
-function updateCounterUI() {
-    const pct = Math.min((counterData.current / counterData.goal) * 100, 100);
-    const goalReached = counterData.current >= counterData.goal;
-
-    // Update all counter elements
-    document.querySelectorAll('[id^="sig-count-"]').forEach(el => {
-        el.textContent = counterData.current;
-    });
-    document.querySelectorAll('[id^="sig-goal-"]').forEach(el => {
-        el.textContent = counterData.goal;
-    });
-    document.querySelectorAll('[id^="progress-"]').forEach(el => {
-        el.style.width = pct + '%';
-    });
-
-    if (goalReached) {
-        // Show banner
-        const banner = document.getElementById('goal-banner');
-        if (banner) banner.classList.remove('hidden');
-
-        // Show estado section
-        const estado = document.getElementById('estado');
-        if (estado) estado.classList.remove('hidden');
-
-        // Update goal text
-        document.querySelectorAll('[id^="goal-text-"]').forEach(el => {
-            el.innerHTML = '<strong class="text-green-500">Meta atingida.</strong>';
-        });
-    }
 }
 
 // Promessas
