@@ -281,6 +281,24 @@
             "titulo": "MAG comunica que petição não atingiu o quinto",
             "descricao": "A Mesa da Assembleia Geral envia comunicado a todos os sócios informando que o universo apurado é de 894 sócios efectivos, o quinto exigido pelos Estatutos é 179, e a petição com 140 assinaturas validadas não atinge o limiar formal. A Secretaria considera o processo concluído da sua parte. O comunicado omite que existe pedido formal de informação dos mandatários, datado de 4 de Maio, sem resposta. Os mandatários contestam.",
             "tipo": "governanca"
+        },
+        {
+            "data": "2026-05-18",
+            "titulo": "Tribunal indefere pedido da Direcção para suspensão da liquidação",
+            "descricao": "O Juízo de Comércio de V.N. de Gaia, Juiz 5, indefere o requerimento da Direcção do Boavista FC para convocação de nova assembleia de credores e suspensão da liquidação em curso. Fundamento: o pedido assenta na mera intenção de apresentação de um plano de insolvência, sem que tal plano tenha sido apresentado. Despacho assinado pela Juíza Iolanda Pereira.",
+            "tipo": "financas"
+        },
+        {
+            "data": "2026-05-19",
+            "titulo": "Validação final do requerimento na Secretaria do Clube",
+            "descricao": "Reunião final na Secretaria do Boavista FC para validação das 270 assinaturas, conduzida no próprio sistema do Clube com observação directa do grupo subscritor. Reconhecidas 140 assinaturas válidas sobre o universo apurado de 974 sócios efectivos com plenitude de direitos a 23 de Abril; quinto estatutário 195. O requerimento não atinge o limiar formal previsto no Art.º 67.º n.º 2 dos Estatutos. Encerrado o processo da petição. O movimento Unidos Pelo Boavista mantém a actividade como plataforma de fiscalização e observatório.",
+            "tipo": "governanca"
+        },
+        {
+            "data": "2026-05-19",
+            "titulo": "Leilão do Estádio do Bessa suspenso por 15 dias",
+            "descricao": "O Juízo de Comércio de V.N. de Gaia defere a suspensão do leilão do Estádio do Bessa e do terreno adjacente por 15 dias, na sequência de requerimentos apresentados pelos credores Merecida Narrativa, Lda. e SACYR – Somague, S.A. (presidente da comissão de credores), aos quais a Administradora de Insolvência aderiu. Findos os 15 dias, há prazo adicional de 5 dias para apresentação de novas licitações. Fonte: A Bola, 19 de Maio de 2026.",
+            "tipo": "estadio"
         }
     ]
 }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promessas Eleitorais · Unidos Pelo Boavista</title>
+    <meta name="description" content="Registo público das promessas eleitorais da actual Direcção do Boavista FC: cumpridas, parciais, não cumpridas e oposto.">
+    <link rel="canonical" href="https://unidospeloboavista.pt/promessas.html">
+    <meta name="theme-color" content="#d4af37">
+    <link rel="icon" type="image/png" href="assets/logo-upb.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unidospeloboavista.pt/promessas.html">
+    <meta property="og:site_name" content="Unidos Pelo Boavista">
+    <meta property="og:title" content="Promessas Eleitorais · Unidos Pelo Boavista">
+    <meta property="og:description" content="Registo público das promessas eleitorais da actual Direcção do Boavista FC.">
+    <meta property="og:image" content="https://unidospeloboavista.pt/assets/og-image.jpg">
+    <meta property="og:locale" content="pt_PT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Promessas Eleitorais · Unidos Pelo Boavista">
+    <meta name="twitter:description" content="Registo público das promessas eleitorais da actual Direcção do Boavista FC.">
+    <meta name="twitter:image" content="https://unidospeloboavista.pt/assets/og-image.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { bfc: { black: '#1a1a1a', white: '#f5f5f5', gold: '#d4af37' } } } }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between gap-3">
+                <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-12 h-12 object-contain">
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold">Unidos Pelo Boavista</h1>
+                        <p class="text-xs text-gray-500 hidden sm:block">Voz crítica e construtiva de sócios do BFC</p>
+                    </div>
+                </a>
+                <nav class="flex items-center gap-0.5 sm:gap-1 text-sm">
+                    <a href="cronologia.html" class="px-2 py-1.5 sm:px-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors font-medium">Cronologia</a>
+                    <a href="promessas.html" aria-current="page" class="px-2 py-1.5 sm:px-3 rounded-md font-semibold bg-gray-100 text-gray-900">Promessas</a>
+                    <a href="peticao.html" class="px-2 py-1.5 sm:px-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors font-medium hidden sm:inline-flex">Petição</a>
+                    <a href="sobre.html" class="px-2 py-1.5 sm:px-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors font-medium">Sobre</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+
+        <header class="space-y-2">
+            <h2 class="text-2xl sm:text-3xl font-black border-l-4 border-bfc-gold pl-4">Promessas Eleitorais: O Registo</h2>
+            <p class="text-sm text-gray-500 pl-5">O que Garrido Pereira prometeu vs o que realmente fez desde Janeiro 2025. Clique numa categoria para ver os detalhes.</p>
+        </header>
+
+        <section id="promessas">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="text-sm font-bold text-red-500" id="promessas-score">--</span>
+            </div>
+            <div class="flex gap-1 h-3 rounded-full overflow-hidden bg-gray-200 mb-1" id="promessas-bar"></div>
+            <div class="flex justify-between text-xs text-gray-500 mb-4" id="promessas-bar-legend"></div>
+            <div id="promessas-content" class="space-y-3"></div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-500">
+                <a href="index.html" class="hover:text-gray-900">Início</a>
+                <a href="cronologia.html" class="hover:text-gray-900">Cronologia</a>
+                <a href="promessas.html" class="hover:text-gray-900">Promessas</a>
+                <a href="peticao.html" class="hover:text-gray-900">Petição (arquivo)</a>
+                <a href="sobre.html" class="hover:text-gray-900">Sobre</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+                <p class="text-xs text-gray-400 text-center leading-relaxed">
+                    Iniciativa independente de sócios do Boavista FC. Sem afiliação com o Clube, os seus órgãos sociais, qualquer grupo, facção ou candidatura. Dados de fontes públicas; podem conter erros que aceitamos corrigir.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "483b5e84aa97427e8d6fd98247aca30a"}'></script>
+</body>
+</html>
