@@ -36,20 +36,31 @@
     <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between gap-3">
-                <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
-                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-12 h-12 object-contain">
-                    <div>
-                        <h1 class="text-base sm:text-lg font-bold">Unidos Pelo Boavista</h1>
+                <a href="index.html" class="flex items-center gap-3 flex-shrink-0 min-w-0">
+                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0">
+                    <div class="min-w-0">
+                        <h1 class="text-sm sm:text-lg font-bold truncate">Unidos Pelo Boavista</h1>
                         <p class="text-xs text-gray-500 hidden sm:block">Voz crítica e construtiva de sócios do BFC</p>
                     </div>
                 </a>
-                <nav class="flex items-center gap-0.5 sm:gap-1 text-sm">
-                    <a href="cronologia.html" aria-current="page" class="px-2 py-1.5 sm:px-3 rounded-md font-semibold bg-gray-100 text-gray-900">Cronologia</a>
-                    <a href="promessas.html" class="px-2 py-1.5 sm:px-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors font-medium">Promessas</a>
-                    <a href="peticao.html" class="px-2 py-1.5 sm:px-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors font-medium hidden sm:inline-flex">Petição</a>
-                    <a href="sobre.html" class="px-2 py-1.5 sm:px-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors font-medium">Sobre</a>
+                <nav class="hidden md:flex items-center gap-1 text-sm">
+                    <a href="cronologia.html" aria-current="page" class="px-3 py-2 rounded-md font-medium transition-colors bg-gray-100 text-gray-900 font-semibold">Cronologia</a>
+                    <a href="promessas.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Promessas</a>
+                    <a href="peticao.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Petição</a>
+                    <a href="sobre.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Sobre</a>
                 </nav>
+                <button id="nav-toggle" class="md:hidden flex-shrink-0 p-2 -mr-2 text-gray-700 hover:bg-gray-100 rounded-md" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
+            <nav id="mobile-nav" class="hidden md:hidden mt-3 pt-3 border-t border-gray-100 flex flex-col gap-1 text-sm">
+                <a href="cronologia.html" aria-current="page" class="px-3 py-2 rounded-md font-medium transition-colors block bg-gray-100 text-gray-900 font-semibold">Cronologia</a>
+                <a href="promessas.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Promessas</a>
+                <a href="peticao.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Petição</a>
+                <a href="sobre.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Sobre</a>
+            </nav>
         </div>
     </header>
 
@@ -85,6 +96,23 @@
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var btn = document.getElementById('nav-toggle');
+            var nav = document.getElementById('mobile-nav');
+            if (!btn || !nav) return;
+            btn.addEventListener('click', function() {
+                var open = !nav.classList.contains('hidden');
+                if (open) {
+                    nav.classList.add('hidden');
+                    btn.setAttribute('aria-expanded', 'false');
+                } else {
+                    nav.classList.remove('hidden');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        })();
+    </script>
     <script src="js/app.js"></script>
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "483b5e84aa97427e8d6fd98247aca30a"}'></script>
 </body>
