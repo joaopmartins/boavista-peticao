@@ -299,6 +299,42 @@
             "titulo": "Leilão do Estádio do Bessa suspenso por 15 dias",
             "descricao": "O Juízo de Comércio de V.N. de Gaia defere a suspensão do leilão do Estádio do Bessa e do terreno adjacente por 15 dias, na sequência de requerimentos apresentados pelos credores Merecida Narrativa, Lda. e SACYR – Somague, S.A. (presidente da comissão de credores), aos quais a Administradora de Insolvência aderiu. Findos os 15 dias, há prazo adicional de 5 dias para apresentação de novas licitações. Fonte: A Bola, 19 de Maio de 2026.",
             "tipo": "estadio"
+        },
+        {
+            "data": "2026-05-29",
+            "titulo": "SAD apresenta novo plano de recuperação para travar liquidação",
+            "descricao": "Após o tribunal decretar a liquidação da Boavista SAD a 12 de Maio, o administrador de insolvência Reinaldo Mâncio da Costa anuncia um novo plano de recuperação. Compromete-se a entregá-lo até 15 de Junho e a obter aprovação até 31 de Julho, prazo em que decorrerão negociações com os principais credores. O plano prevê reduzir a actividade desportiva ao mínimo indispensável, com aposta na equipa de sub-19 em 2026/27. O accionista maioritário Gérard Lopez mantém donativos mensais superiores a 50 mil euros. Fontes: Portal Tela, MaisFutebol, JN, 29 de Maio de 2026.",
+            "tipo": "sad"
+        },
+        {
+            "data": "2026-06-07",
+            "titulo": "Futebol e modalidades sobrevivem de donativos e em risco de encerrar",
+            "descricao": "O clube, com cerca de 1.500 atletas em várias modalidades, encara a época sustentado apenas por donativos. Gérard Lopez assegura mensalidades superiores a 50 mil euros, através da Administradora de Insolvência, para cobrir a despesa corrente estimada em 50 a 55 mil euros. Em caso de incumprimento, a Administradora pode ordenar o encerramento imediato da actividade, com efeitos 15 dias depois, sem necessidade de nova assembleia de credores. Fonte: Record, 7 de Junho de 2026.",
+            "tipo": "modalidades"
+        },
+        {
+            "data": "2026-06-09",
+            "titulo": "Leilão termina: Bessa sem comprador, complexo vendido por 6,5 milhões",
+            "descricao": "Termina às 18h15 o leilão electrónico dos imóveis do Boavista FC, retomado após a suspensão de 19 de Maio. O Estádio do Bessa, isolado, não recebe qualquer proposta (valor mínimo 27,016 milhões de euros). O lote conjunto (estádio mais complexo) fica-se pela melhor oferta de 25,7 milhões, abaixo do mínimo de 32,917 milhões, em 12 licitações. O complexo desportivo é vendido por 6,5 milhões de euros (mínimo 5,9 milhões), após 15 licitações; o comprador não é divulgado. A leiloeira Leilosoc elabora relatório de venda, cabendo à comissão de credores e à Administradora de Insolvência decidir sobre a aceitação. Fontes: A Bola, ECO, MaisFutebol, Observador, 9 a 11 de Junho de 2026.",
+            "tipo": "estadio"
+        },
+        {
+            "data": "2026-06-10",
+            "titulo": "Direcção emite mensagem aos sócios sobre o leilão",
+            "descricao": "Por email aos sócios, a Direcção afirma ter acompanhado de perto o processo de leilão dos activos, cujo prazo terminou na véspera, e declara que entre as propostas apresentadas se encontram as de investidores que têm vindo a colaborar com a Direcção na construção de uma solução de recuperação para o Clube. Não presta esclarecimentos adicionais nem identifica os investidores. Fonte: comunicado oficial da Direcção enviado por email aos sócios, 10 de Junho de 2026.",
+            "tipo": "governanca"
+        },
+        {
+            "data": "2026-06-29",
+            "titulo": "Assembleia Municipal do Porto debate o caso Boavista",
+            "descricao": "Na sessão ordinária de 29 de Junho, e na sequência da petição pública Boavista Futebol Clube: Mais que um Clube, um Símbolo da Cidade (dirigida à Câmara Municipal do Porto, iniciada a 13 de Novembro de 2025 e que já ultrapassa os 1.600 subscritores), vários grupos municipais apresentam instrumentos de apoio ao Clube. O Bloco de Esquerda propõe constituir uma Comissão Eventual de salvaguarda do património cultural e recomendar a avaliação da classificação do Estádio do Bessa Século XXI como bem cultural de interesse municipal. O Partido Socialista apresenta uma recomendação em defesa do Clube e da zona desportiva do Bessa, recordando que o Município do Porto é accionista minoritário da SAD. Os grupos do PSD, CDS-PP e IL apresentam uma moção de reconhecimento do Clube. A petição pede a classificação do clube como Património Imaterial de Interesse Municipal, a protecção dos seus símbolos e a preservação do Estádio do Bessa. Fontes: documentos oficiais dos grupos municipais da Assembleia Municipal do Porto e petição pública PT128554, 29 de Junho de 2026. Nota: esta petição municipal de património é distinta do requerimento de 270 sócios do movimento Unidos Pelo Boavista.",
+            "tipo": "governanca"
+        },
+        {
+            "data": "2026-07-01",
+            "titulo": "Direcção comunica congelamento das renovações de quotas",
+            "descricao": "Em email aos sócios, a Direcção informa que, no âmbito da preparação da época 2026/2027, estão a ser finalizados procedimentos de gestão de associados, pelo que o processo de renovação de quotas e anuidades ainda não se encontra disponível, prometendo comunicar oportunamente a data de abertura. Recorda que o Clube conta com cerca de 1.500 atletas em várias modalidades e apela ao apoio dos sócios. Fonte: comunicado oficial da Direcção enviado por email aos sócios, 1 de Julho de 2026.",
+            "tipo": "governanca"
         }
     ]
 }
