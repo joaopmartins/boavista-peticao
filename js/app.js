@@ -191,7 +191,22 @@ function renderCronologia() {
     const content = document.getElementById('cronologia-content');
     if (!content) return;
 
-    const eventos = cronologiaData.eventos.sort((a, b) => b.data.localeCompare(a.data));
+    const eventos = cronologiaData.eventos.slice().sort((a, b) => b.data.localeCompare(a.data));
+
+    // Data da ultima actualizacao + janela de eventos recentes (auto, sem manutencao)
+    if (eventos.length) {
+        const newest = new Date(eventos[0].data);
+        const badge = document.getElementById('cronologia-updated');
+        if (badge) {
+            const d = newest.toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
+            badge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-medium bg-bfc-gold/10 text-yellow-800 border border-bfc-gold/40 rounded-full px-2.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-bfc-gold"></span>Atualizado a ${d}</span>`;
+            badge.classList.remove('hidden');
+        }
+        // marca como recente tudo nos 40 dias anteriores ao evento mais recente
+        const recentCutoff = new Date(newest);
+        recentCutoff.setDate(recentCutoff.getDate() - 40);
+        eventos.forEach(e => { e._recente = new Date(e.data) >= recentCutoff; });
+    }
 
     renderCronologiaTimeline(content, eventos);
     setupCronologiaFilters(eventos);
@@ -209,11 +224,17 @@ function renderCronologiaTimeline(container, eventos) {
         const dateStr = date.toLocaleDateString('pt-PT', { day: 'numeric', month: 'short', year: 'numeric' });
 
         const item = document.createElement('div');
-        item.className = 'relative';
+        item.className = 'relative' + (evento._recente ? ' bg-bfc-gold/10 rounded-md px-2 py-1.5' : '');
+        const dot = evento._recente
+            ? `w-3.5 h-3.5 ring-2 ring-bfc-gold`
+            : `w-3 h-3`;
+        const novoTag = evento._recente
+            ? ` <span class="align-middle ml-1 text-[10px] font-bold uppercase tracking-wide bg-bfc-gold text-bfc-black rounded px-1.5 py-0.5">Novo</span>`
+            : '';
         item.innerHTML = `
-            <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full ${cfg.color} border-2 border-white"></div>
+            <div class="absolute -left-[25px] top-1 ${dot} rounded-full ${cfg.color} border-2 border-white"></div>
             <div class="text-xs text-gray-400">${dateStr}</div>
-            <div class="text-sm font-semibold text-gray-800">${evento.titulo}</div>
+            <div class="text-sm font-semibold text-gray-800">${evento.titulo}${novoTag}</div>
             <div class="text-xs text-gray-500 mt-0.5">${evento.descricao}</div>
         `;
         timeline.appendChild(item);
