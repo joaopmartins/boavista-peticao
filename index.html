@@ -65,12 +65,21 @@
         </div>
     </header>
 
-    <!-- Status banner -->
-    <div id="goal-banner" class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-center text-sm font-semibold text-center">
-            <span>Petição encerrou a 19 de Maio: 140 assinaturas validadas, abaixo do quinto estatutário (195/974). O movimento continua.</span>
+    <!-- Barra de última actualização (dinâmica, ligada à cronologia) -->
+    <a id="update-banner" href="cronologia.html" class="block bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 text-white transition-colors">
+        <div class="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-x-2.5 gap-y-1 text-sm text-center flex-wrap">
+            <span class="flex-shrink-0 inline-flex items-center gap-1.5 font-bold text-bfc-gold">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-bfc-gold opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-bfc-gold"></span>
+                </span>
+                Atualizado <span id="banner-date"></span>
+            </span>
+            <span class="hidden sm:inline text-gray-500">·</span>
+            <span id="banner-latest" class="hidden sm:inline truncate max-w-[45ch] text-gray-200"></span>
+            <span class="flex-shrink-0 font-semibold text-bfc-gold whitespace-nowrap">Ver cronologia &rarr;</span>
         </div>
-    </div>
+    </a>
 
     <!-- Hero -->
     <section id="hero" class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 text-gray-900 py-8 sm:py-12 border-b-4 border-bfc-gold">
@@ -234,7 +243,19 @@
                 const res = await fetch('data/cronologia.json');
                 if (!res.ok) return;
                 const data = await res.json();
-                const eventos = data.eventos.slice().sort((a, b) => b.data.localeCompare(a.data)).slice(0, 5);
+                const ordenados = data.eventos.slice().sort((a, b) => b.data.localeCompare(a.data));
+                const eventos = ordenados.slice(0, 5);
+
+                // Preencher a barra de última actualização
+                const mesesAbr = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+                const bd = document.getElementById('banner-date');
+                const bl = document.getElementById('banner-latest');
+                if (bd) {
+                    const p = (data.atualizado || (ordenados[0] && ordenados[0].data) || '').split('-');
+                    if (p.length === 3) bd.textContent = 'a ' + parseInt(p[2], 10) + ' ' + mesesAbr[parseInt(p[1], 10) - 1] + '.';
+                }
+                if (bl && ordenados[0]) bl.textContent = ordenados[0].titulo;
+
                 const typeConfig = {
                     governanca: { color: 'bg-gray-400', label: 'Governança' },
                     financas: { color: 'bg-red-500', label: 'Finanças' },
