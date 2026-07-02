@@ -193,12 +193,14 @@ function renderCronologia() {
 
     const eventos = cronologiaData.eventos.slice().sort((a, b) => b.data.localeCompare(a.data));
 
-    // Data da ultima actualizacao + janela de eventos recentes (auto, sem manutencao)
+    // Data da ultima actualizacao (campo 'atualizado' do JSON; fallback = evento mais recente)
+    // + janela de eventos recentes para realce
     if (eventos.length) {
         const newest = new Date(eventos[0].data);
+        const updated = cronologiaData.atualizado ? new Date(cronologiaData.atualizado) : newest;
         const badge = document.getElementById('cronologia-updated');
         if (badge) {
-            const d = newest.toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
+            const d = updated.toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
             badge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-medium bg-bfc-gold/10 text-yellow-800 border border-bfc-gold/40 rounded-full px-2.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-bfc-gold"></span>Atualizado a ${d}</span>`;
             badge.classList.remove('hidden');
         }
