@@ -54,11 +54,12 @@ function renderPromessas() {
     if (!promessasData) return;
 
     const statusConfig = {
-        cumprida: { icon: '\u2705', label: 'Cumprida', color: 'text-green-600', bg: 'bg-green-500' },
-        parcial: { icon: '\uD83D\uDFE1', label: 'Parcial', color: 'text-yellow-600', bg: 'bg-yellow-500' },
-        nao_cumprida: { icon: '\u274C', label: 'N\u00e3o cumprida', color: 'text-red-600', bg: 'bg-red-500' },
-        oposto: { icon: '\uD83D\uDC80', label: 'Fez o oposto', color: 'text-gray-900', bg: 'bg-gray-900' }
+        cumprida: { label: 'Cumprida', color: 'text-green-800', bg: 'bg-green-700' },
+        parcial: { label: 'Parcial', color: 'text-yellow-700', bg: 'bg-yellow-500' },
+        nao_cumprida: { label: 'N\u00e3o cumprida', color: 'text-red-800', bg: 'bg-red-700' },
+        oposto: { label: 'Fez o oposto', color: 'text-black', bg: 'bg-black' }
     };
+    const marker = (key, extra) => `<span class="inline-block w-2.5 h-2.5 ${statusConfig[key].bg} ${extra || ''}" title="${statusConfig[key].label}"></span>`;
 
     // Count totals
     let counts = { cumprida: 0, parcial: 0, nao_cumprida: 0, oposto: 0 };
@@ -101,10 +102,10 @@ function renderPromessas() {
     const legend = document.getElementById('promessas-bar-legend');
     if (legend) {
         legend.innerHTML = `
-            <span>${statusConfig.cumprida.icon} ${counts.cumprida} cumpridas</span>
-            <span>${statusConfig.parcial.icon} ${counts.parcial} parciais</span>
-            <span>${statusConfig.nao_cumprida.icon} ${counts.nao_cumprida} n\u00e3o cumpridas</span>
-            <span>${statusConfig.oposto.icon} ${counts.oposto} fez o oposto</span>
+            <span class="inline-flex items-center gap-1.5">${marker('cumprida')} ${counts.cumprida} cumpridas</span>
+            <span class="inline-flex items-center gap-1.5">${marker('parcial')} ${counts.parcial} parciais</span>
+            <span class="inline-flex items-center gap-1.5">${marker('nao_cumprida')} ${counts.nao_cumprida} n\u00e3o cumpridas</span>
+            <span class="inline-flex items-center gap-1.5">${marker('oposto')} ${counts.oposto} fez o oposto</span>
         `;
     }
 
@@ -115,40 +116,40 @@ function renderPromessas() {
 
     promessasData.categorias.forEach(cat => {
         const catDiv = document.createElement('details');
-        catDiv.className = 'bg-white rounded-lg border border-gray-200 overflow-hidden';
+        catDiv.className = 'border border-bfc-line bg-white/60';
 
         const catCounts = { cumprida: 0, parcial: 0, nao_cumprida: 0, oposto: 0 };
         cat.promessas.forEach(p => catCounts[p.status]++);
 
         const summary = document.createElement('summary');
-        summary.className = 'px-4 py-3 cursor-pointer hover:bg-gray-50 transition-colors flex items-center justify-between gap-2';
+        summary.className = 'px-4 py-3.5 cursor-pointer hover:bg-black/5 transition-colors flex items-center justify-between gap-2';
         summary.innerHTML = `
-            <span class="font-medium text-sm flex-1">
-                <span class="mr-1">${cat.icon}</span> ${cat.nome}
-                <span class="text-gray-400 text-xs ml-1">(${cat.promessas.length})</span>
+            <span class="font-display font-bold text-base flex-1">
+                ${cat.nome}
+                <span class="text-neutral-400 text-xs font-sans font-normal ml-1">(${cat.promessas.length})</span>
             </span>
-            <span class="flex gap-1 text-xs flex-shrink-0">
-                ${catCounts.cumprida ? `<span class="bg-green-100 text-green-700 px-1.5 py-0.5 rounded">${catCounts.cumprida} \u2705</span>` : ''}
-                ${catCounts.parcial ? `<span class="bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded">${catCounts.parcial} \uD83D\uDFE1</span>` : ''}
-                ${catCounts.nao_cumprida ? `<span class="bg-gray-100 text-gray-700 px-1.5 py-0.5 rounded">${catCounts.nao_cumprida} \u274C</span>` : ''}
-                ${catCounts.oposto ? `<span class="bg-red-100 text-red-700 px-1.5 py-0.5 rounded">${catCounts.oposto} \uD83D\uDC80</span>` : ''}
+            <span class="flex items-center gap-2.5 text-xs text-neutral-600 flex-shrink-0">
+                ${catCounts.cumprida ? `<span class="inline-flex items-center gap-1">${marker('cumprida')}${catCounts.cumprida}</span>` : ''}
+                ${catCounts.parcial ? `<span class="inline-flex items-center gap-1">${marker('parcial')}${catCounts.parcial}</span>` : ''}
+                ${catCounts.nao_cumprida ? `<span class="inline-flex items-center gap-1">${marker('nao_cumprida')}${catCounts.nao_cumprida}</span>` : ''}
+                ${catCounts.oposto ? `<span class="inline-flex items-center gap-1">${marker('oposto')}${catCounts.oposto}</span>` : ''}
             </span>
-            <svg class="w-4 h-4 text-gray-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-4 h-4 text-neutral-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         `;
         catDiv.appendChild(summary);
 
         const list = document.createElement('div');
-        list.className = 'px-4 pb-3 space-y-2';
+        list.className = 'px-4 pb-4 pt-1 space-y-2.5 border-t border-bfc-line';
 
         cat.promessas.forEach(p => {
             const cfg = statusConfig[p.status];
             const item = document.createElement('div');
-            item.className = 'flex items-start gap-2 text-sm';
+            item.className = 'flex items-start gap-2.5 text-sm';
             item.innerHTML = `
-                <span class="text-base flex-shrink-0 mt-0.5" title="${cfg.label}">${cfg.icon}</span>
+                ${marker(p.status, 'flex-shrink-0 mt-1.5')}
                 <div>
                     <span class="${cfg.color}">${p.texto}</span>
-                    ${p.nota ? `<p class="text-xs text-gray-400 mt-0.5">${p.nota}</p>` : ''}
+                    ${p.nota ? `<p class="text-xs text-neutral-500 mt-0.5">${p.nota}</p>` : ''}
                 </div>
             `;
             list.appendChild(item);
@@ -165,12 +166,12 @@ function renderPromessas() {
 
 // Cronologia
 const cronologiaTypeConfig = {
-    governanca: { color: 'bg-gray-400', label: 'Governan\u00e7a' },
-    financas: { color: 'bg-red-500', label: 'Finan\u00e7as' },
-    modalidades: { color: 'bg-orange-500', label: 'Modalidades' },
-    estadio: { color: 'bg-yellow-500', label: 'Est\u00e1dio' },
-    sad: { color: 'bg-purple-500', label: 'SAD' },
-    positivo: { color: 'bg-green-500', label: 'Positivo' }
+    governanca: { color: 'bg-neutral-400', label: 'Governan\u00e7a' },
+    financas: { color: 'bg-red-700', label: 'Finan\u00e7as' },
+    modalidades: { color: 'bg-orange-600', label: 'Modalidades' },
+    estadio: { color: 'bg-bfc-gold', label: 'Est\u00e1dio' },
+    sad: { color: 'bg-purple-700', label: 'SAD' },
+    positivo: { color: 'bg-green-700', label: 'Positivo' }
 };
 
 async function loadCronologia() {
@@ -201,7 +202,7 @@ function renderCronologia() {
         const badge = document.getElementById('cronologia-updated');
         if (badge) {
             const d = updated.toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
-            badge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-medium bg-bfc-gold/10 text-yellow-800 border border-bfc-gold/40 rounded-full px-2.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-bfc-gold"></span>Atualizado a ${d}</span>`;
+            badge.innerHTML = `<span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-golddark"><span class="w-2 h-2 bg-bfc-gold"></span>Atualizado a ${d}</span>`;
             badge.classList.remove('hidden');
         }
         // marca como recente tudo nos 40 dias anteriores ao evento mais recente
@@ -218,7 +219,7 @@ function renderCronologiaTimeline(container, eventos) {
     container.innerHTML = '';
 
     const timeline = document.createElement('div');
-    timeline.className = 'relative pl-6 border-l-2 border-gray-200 space-y-4';
+    timeline.className = 'border-t border-bfc-line';
 
     eventos.forEach(evento => {
         const cfg = cronologiaTypeConfig[evento.tipo] || cronologiaTypeConfig.governanca;
@@ -226,18 +227,17 @@ function renderCronologiaTimeline(container, eventos) {
         const dateStr = date.toLocaleDateString('pt-PT', { day: 'numeric', month: 'short', year: 'numeric' });
 
         const item = document.createElement('div');
-        item.className = 'relative' + (evento._recente ? ' bg-bfc-gold/10 rounded-md px-2 py-1.5' : '');
-        const dot = evento._recente
-            ? `w-3.5 h-3.5 ring-2 ring-bfc-gold`
-            : `w-3 h-3`;
+        item.className = 'border-b border-bfc-line py-4' + (evento._recente ? ' border-l-2 border-l-bfc-gold pl-3 sm:pl-4' : '');
         const novoTag = evento._recente
-            ? ` <span class="align-middle ml-1 text-[10px] font-bold uppercase tracking-wide bg-bfc-gold text-bfc-black rounded px-1.5 py-0.5">Novo</span>`
+            ? ` <span class="align-middle ml-1.5 text-[9px] font-sans font-bold uppercase tracking-[0.14em] bg-bfc-gold text-bfc-black px-1.5 py-0.5">Novo</span>`
             : '';
         item.innerHTML = `
-            <div class="absolute -left-[25px] top-1 ${dot} rounded-full ${cfg.color} border-2 border-white"></div>
-            <div class="text-xs text-gray-400">${dateStr}</div>
-            <div class="text-sm font-semibold text-gray-800">${evento.titulo}${novoTag}</div>
-            <div class="text-xs text-gray-500 mt-0.5">${evento.descricao}</div>
+            <div class="flex items-baseline gap-3">
+                <span class="text-[11px] font-bold tracking-[0.08em] text-neutral-500 whitespace-nowrap tabular-nums">${dateStr}</span>
+                <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-neutral-500"><span class="w-2 h-2 ${cfg.color}"></span>${cfg.label}</span>
+            </div>
+            <div class="font-display font-bold text-lg leading-snug mt-1.5">${evento.titulo}${novoTag}</div>
+            <div class="text-sm text-neutral-600 leading-relaxed mt-1">${evento.descricao}</div>
         `;
         timeline.appendChild(item);
     });
@@ -255,7 +255,7 @@ function setupCronologiaFilters(eventos) {
 
     // "Todos" pill
     const allBtn = document.createElement('button');
-    allBtn.className = 'cronologia-filter active px-3 py-1 text-xs font-medium rounded-full border border-gray-300 transition-colors';
+    allBtn.className = 'cronologia-filter active px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] transition-colors';
     allBtn.textContent = 'Todos';
     allBtn.addEventListener('click', () => {
         setActiveFilter(filtersContainer, allBtn);
@@ -267,7 +267,7 @@ function setupCronologiaFilters(eventos) {
     types.forEach(type => {
         const cfg = cronologiaTypeConfig[type] || cronologiaTypeConfig.governanca;
         const btn = document.createElement('button');
-        btn.className = 'cronologia-filter px-3 py-1 text-xs font-medium rounded-full border border-gray-300 text-gray-600 hover:border-gray-400 transition-colors';
+        btn.className = 'cronologia-filter px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-neutral-600 hover:border-neutral-500 transition-colors';
         btn.textContent = cfg.label;
         btn.addEventListener('click', () => {
             setActiveFilter(filtersContainer, btn);
@@ -281,8 +281,8 @@ function setupCronologiaFilters(eventos) {
 function setActiveFilter(container, activeBtn) {
     container.querySelectorAll('.cronologia-filter').forEach(btn => {
         btn.classList.remove('active');
-        btn.classList.add('text-gray-600');
+        btn.classList.add('text-neutral-600');
     });
     activeBtn.classList.add('active');
-    activeBtn.classList.remove('text-gray-600');
+    activeBtn.classList.remove('text-neutral-600');
 }

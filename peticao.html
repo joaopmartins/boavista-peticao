@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petição (arquivo) · Unidos Pelo Boavista</title>
-    <meta name="description" content="Arquivo da petição de Assembleia Geral Extraordinária entregue a 23 de Abril de 2026, encerrada a 19 de Maio. Estado final, signatários, requerimento, base legal e contexto.">
+    <meta name="description" content="Arquivo da petição de Assembleia Geral Extraordinária entregue a 23 de Abril de 2026, encerrada a 19 de Maio. Comunicado, estado final, signatários, requerimento, base legal e contexto.">
     <link rel="canonical" href="https://unidospeloboavista.pt/peticao.html">
-    <meta name="theme-color" content="#d4af37">
+    <meta name="theme-color" content="#141414">
     <link rel="icon" type="image/png" href="assets/logo-upb.png">
 
     <meta property="og:type" content="website">
@@ -25,218 +25,265 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            theme: { extend: { colors: { bfc: { black: '#1a1a1a', white: '#f5f5f5', gold: '#d4af37' } } } }
+            theme: { extend: {
+                colors: { bfc: { black: '#141414', paper: '#f7f5f0', gold: '#d4af37', golddark: '#8f6f1f', line: '#dcd7cb' } },
+                fontFamily: { display: ['Newsreader', 'Georgia', 'serif'] }
+            } }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50 text-gray-900 min-h-screen">
+<body class="bg-bfc-paper text-bfc-black min-h-screen">
 
-    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="xadrez" aria-hidden="true"></div>
+
+    <header class="bg-bfc-paper/95 backdrop-blur sticky top-0 z-50 border-b-2 border-bfc-black">
         <div class="max-w-4xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between gap-3">
                 <a href="index.html" class="flex items-center gap-3 flex-shrink-0 min-w-0">
-                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0">
+                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-10 h-10 sm:w-11 sm:h-11 object-contain flex-shrink-0">
                     <div class="min-w-0">
-                        <h1 class="text-sm sm:text-lg font-bold truncate">Unidos Pelo Boavista</h1>
-                        <p class="text-xs text-gray-500 hidden sm:block">Voz crítica e construtiva de sócios do BFC</p>
+                        <h1 class="font-display font-bold text-lg sm:text-xl leading-none truncate">Unidos Pelo Boavista</h1>
+                        <p class="text-[10px] uppercase tracking-[0.16em] text-neutral-500 hidden sm:block mt-1">Observatório independente de sócios do BFC</p>
                     </div>
                 </a>
-                <nav class="hidden md:flex items-center gap-1 text-sm">
-                    <a href="cronologia.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Cronologia</a>
-                    <a href="promessas.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Promessas</a>
-                    <a href="peticao.html" aria-current="page" class="px-3 py-2 rounded-md font-medium transition-colors bg-gray-100 text-gray-900 font-semibold">Petição</a>
-                    <a href="sobre.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Sobre</a>
+                <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold uppercase tracking-[0.14em]">
+                    <a href="cronologia.html" class="text-neutral-600 hover:text-bfc-black py-2">Cronologia</a>
+                    <a href="promessas.html" class="text-neutral-600 hover:text-bfc-black py-2">Promessas</a>
+                    <a href="sobre.html" class="text-neutral-600 hover:text-bfc-black py-2">Sobre</a>
                 </nav>
-                <button id="nav-toggle" class="md:hidden flex-shrink-0 p-2 -mr-2 text-gray-700 hover:bg-gray-100 rounded-md" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+                <button id="nav-toggle" class="md:hidden flex-shrink-0 p-2 -mr-2 text-bfc-black hover:bg-black/5" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
             </div>
-            <nav id="mobile-nav" class="hidden md:hidden mt-3 pt-3 border-t border-gray-100 flex flex-col gap-1 text-sm">
-                <a href="cronologia.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Cronologia</a>
-                <a href="promessas.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Promessas</a>
-                <a href="peticao.html" aria-current="page" class="px-3 py-2 rounded-md font-medium transition-colors block bg-gray-100 text-gray-900 font-semibold">Petição</a>
-                <a href="sobre.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Sobre</a>
+            <nav id="mobile-nav" class="hidden md:hidden mt-3 pt-3 border-t border-bfc-line flex flex-col gap-1 text-[12px] font-bold uppercase tracking-[0.14em]">
+                <a href="cronologia.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Cronologia</a>
+                <a href="promessas.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Promessas</a>
+                <a href="sobre.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Sobre</a>
             </nav>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-14">
 
-        <header class="space-y-2">
-            <p class="text-xs uppercase tracking-wider font-semibold text-gray-500">Arquivo</p>
-            <h2 class="text-2xl sm:text-3xl font-black border-l-4 border-bfc-gold pl-4">Petição para Assembleia Geral Extraordinária</h2>
-            <p class="text-sm text-gray-500 pl-5">Entregue a 23 de Abril de 2026 com 270 assinaturas. Encerrada a 19 de Maio de 2026 sem atingir o quinto estatutário. Esta página guarda o estado final e a documentação do processo.</p>
+        <header>
+            <p class="kicker">Arquivo</p>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 tracking-tight">Petição para Assembleia Geral Extraordinária</h2>
+            <p class="text-sm text-neutral-600 mt-2 max-w-2xl">Entregue a 23 de Abril de 2026 com 270 assinaturas. Encerrada a 19 de Maio de 2026 sem atingir o quinto estatutário. Esta página guarda o comunicado de encerramento, o estado final e a documentação do processo.</p>
+            <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-neutral-600 mt-4 pt-4 border-t border-bfc-line">
+                <span><strong class="font-display text-lg text-bfc-black">270</strong> entregues</span>
+                <span><strong class="font-display text-lg text-bfc-black">140</strong> válidas</span>
+                <span>limite necessário: <strong class="font-display text-lg text-bfc-black">195</strong> (entre 974 sócios efectivos)</span>
+            </div>
         </header>
+
+        <!-- Comunicado -->
+        <section id="comunicado">
+            <div class="section-head">
+                <p class="kicker">Comunicado de 20 de Maio de 2026</p>
+            </div>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl mt-5">Balanço do requerimento e continuidade do movimento</h3>
+
+            <div class="prose-editorial mt-5 space-y-4">
+                <p class="dropcap">
+                    O movimento "Unidos Pelo Boavista" entregou, a 23 de Abril, um requerimento de Assembleia Geral Extraordinária com 270 assinaturas, ao abrigo do Art.º 67.º n.º 2 dos Estatutos. No dia 19 de Maio, em reunião com a Secretaria do Clube, conduziu-se a validação final no próprio sistema do Clube, com a nossa observação directa: <strong>140 assinaturas foram reconhecidas válidas</strong>, sobre um universo de <strong>974 sócios efectivos</strong> com plenitude de direitos a 23 de Abril, cujo quinto estatutário se cifra em <strong>195</strong>. O requerimento não cumpre o limite estatutário para convocação de Assembleia Geral Extraordinária.
+                </p>
+                <p>
+                    Reconhecemos o resultado e agradecemos à Secretaria do Clube a transparência demonstrada nesta sessão final, à Mesa da Assembleia Geral o papel de mediação, e a todos os 270 sócios que assinaram, em particular aos 140 cuja qualidade de sócios em plenitude de direitos foi formalmente reconhecida.
+                </p>
+                <p>
+                    Importa, em rigor de informação, deixar uma palavra sobre os 130 sócios cujas assinaturas não foram validadas. A esmagadora maioria deste grupo são sócios reais e estabelecidos no Clube, com quotas pagas até algum momento de 2025. Não são sócios inexistentes, nem identidades duplicadas, nem assinaturas fabricadas. São sócios que, à data de 23 de Abril, não cumpriam ainda assim a exigência do Art.º 31.º dos Estatutos por insuficiente actualização das quotas mais recentes. <strong>A inelegibilidade técnica não retira nada à legitimidade individual de quem assinou.</strong>
+                </p>
+
+                <h4 class="font-display font-bold text-xl pt-3">O que retemos deste processo</h4>
+                <p>
+                    A petição não atingiu o objectivo formal, mas o processo deixou três aprendizagens que justificam a continuidade do movimento.
+                </p>
+                <p>
+                    <strong>Primeira.</strong> Existe uma fatia significativa de sócios que, à data, não tinha noção de estar em situação de quotas em atraso. A comunicação do Clube com a sua base associativa precisa de melhorar consideravelmente, e isso ficou demonstrado em factos.
+                </p>
+                <p>
+                    <strong>Segunda.</strong> 140 sócios efectivos em plenitude de direitos, em três semanas e através de um processo formal exigente, manifestaram-se sobre o estado do Clube. Não é um número de protesto pontual; é um número de mobilização sustentada.
+                </p>
+                <p>
+                    <strong>Terceira.</strong> O contexto em que esta petição nasceu não mudou. O Clube continua em processo de insolvência, sob risco patrimonial real. A 18 de Maio, o Juízo de Comércio de Vila Nova de Gaia indeferiu o requerimento da Direcção para suspensão da liquidação, com fundamento em não ter sido apresentado qualquer plano de insolvência. As verbas relevantes continuam sob potencial alienação.
+                </p>
+
+                <h4 class="font-display font-bold text-xl pt-3">O que continuamos a fazer</h4>
+                <p>
+                    A petição encerra. O movimento não. "Unidos Pelo Boavista" continua, a partir de hoje, como:
+                </p>
+                <ul class="list-none space-y-2 pl-0">
+                    <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-2.5"></span><span><strong>Plataforma de fiscalização</strong> sobre o estado do Clube, com particular atenção à transparência das decisões da Direcção e dos órgãos sociais.</span></li>
+                    <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-2.5"></span><span><strong>Observatório</strong> independente do processo de insolvência e dos acontecimentos judiciais e desportivos que afectem o Clube.</span></li>
+                    <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-2.5"></span><span><strong>Espaço de discussão</strong> entre sócios sobre o futuro do Boavista.</span></li>
+                </ul>
+                <p>
+                    O acompanhamento da timeline dos acontecimentos e do cumprimento das promessas eleitorais da actual Direcção, já iniciado neste sítio, é a espinha dorsal deste trabalho daqui em diante.
+                </p>
+                <p>
+                    A nossa postura permanece a mesma: cordial, crítica e construtiva. Não somos opositores por princípio. Somos sócios que reivindicam o direito a saber, a debater e a acompanhar. A Assembleia Geral é, nos termos do Art.º 58.º dos Estatutos, a autoridade suprema do Clube. Que assim continue a ser, dentro e fora dos seus actos formais.
+                </p>
+                <p class="text-sm text-neutral-500 pt-2">
+                    Porto, 20 de Maio de 2026<br>
+                    <em>Unidos Pelo Boavista</em>
+                </p>
+            </div>
+        </section>
 
         <!-- Estado da Petição -->
         <section id="estado">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 border-l-4 border-bfc-gold pl-4">Estado final</h3>
-            <p class="text-sm text-gray-500 mb-6 pl-5">Marcos do requerimento, do início ao encerramento.</p>
+            <div class="section-head">
+                <p class="kicker">Estado final</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-6">Marcos do requerimento, do início ao encerramento.</p>
 
-            <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
-                <div class="relative pl-6 border-l-2 border-gray-200 space-y-6">
-                    <div class="relative">
-                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-gray-700 border-2 border-white"></div>
-                        <div class="flex items-center gap-2 flex-wrap">
-                            <span class="text-sm font-semibold text-gray-900">Validação final na Secretaria do Clube</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full font-medium">Encerrado</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-1">19 de Maio de 2026. Validação final no próprio sistema do Clube, com observação directa do grupo subscritor. Reconhecidas 140 assinaturas válidas sobre o universo de 974 sócios efectivos com plenitude de direitos a 23 de Abril; quinto estatutário 195. O requerimento não atinge o limiar formal previsto no Art.º 67.º n.º 2 dos Estatutos.</p>
+            <div class="relative pl-6 border-l border-bfc-line space-y-7">
+                <div class="relative">
+                    <div class="absolute -left-[29px] top-1 w-3 h-3 bg-bfc-black border-2 border-bfc-paper"></div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-display font-bold text-lg">Validação final na Secretaria do Clube</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.14em] bg-bfc-black text-white px-2 py-0.5">Encerrado</span>
                     </div>
-                    <div class="relative">
-                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-green-500 border-2 border-white"></div>
-                        <div class="flex items-center gap-2 flex-wrap">
-                            <span class="text-sm font-semibold text-gray-900">Entrega do requerimento à Mesa da Assembleia Geral</span>
-                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Concluído</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-1">23 de Abril de 2026. Entregue na Secretaria do Clube o requerimento formal subscrito por 270 sócios efectivos, acompanhado da lista de signatários e das 270 assinaturas digitais individuais.</p>
-                        <a href="docs/requerimento-ag-extraordinaria.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-2 text-xs font-semibold text-gray-900 bg-bfc-gold hover:bg-yellow-500 px-3 py-1.5 rounded-md transition-colors">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                            Ler o requerimento (PDF)
-                        </a>
+                    <p class="text-sm text-neutral-600 mt-1.5 leading-relaxed">19 de Maio de 2026. Validação final no próprio sistema do Clube, com observação directa do grupo subscritor. Reconhecidas 140 assinaturas válidas sobre o universo de 974 sócios efectivos com plenitude de direitos a 23 de Abril; quinto estatutário 195. O requerimento não atinge o limiar formal previsto no Art.º 67.º n.º 2 dos Estatutos.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[29px] top-1 w-3 h-3 bg-bfc-gold border-2 border-bfc-paper"></div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-display font-bold text-lg">Entrega do requerimento à Mesa da Assembleia Geral</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.14em] border border-bfc-black px-2 py-0.5">Concluído</span>
                     </div>
-                    <div class="relative">
-                        <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-green-500 border-2 border-white"></div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-sm font-semibold text-gray-900">Recolha de assinaturas</span>
-                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Concluído</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-1">270 assinaturas digitais recolhidas em três semanas, em conformidade com o Regulamento eIDAS.</p>
+                    <p class="text-sm text-neutral-600 mt-1.5 leading-relaxed">23 de Abril de 2026. Entregue na Secretaria do Clube o requerimento formal subscrito por 270 sócios efectivos, acompanhado da lista de signatários e das 270 assinaturas digitais individuais.</p>
+                    <a href="docs/requerimento-ag-extraordinaria.pdf" target="_blank" rel="noopener" class="inline-block mt-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-black border border-bfc-black px-3 py-1.5 hover:bg-bfc-black hover:text-white transition-colors">
+                        Ler o requerimento (PDF)
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[29px] top-1 w-3 h-3 bg-bfc-gold border-2 border-bfc-paper"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-display font-bold text-lg">Recolha de assinaturas</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.14em] border border-bfc-black px-2 py-0.5">Concluído</span>
                     </div>
+                    <p class="text-sm text-neutral-600 mt-1.5 leading-relaxed">270 assinaturas digitais recolhidas em três semanas, em conformidade com o Regulamento eIDAS.</p>
                 </div>
             </div>
         </section>
 
         <!-- Signatários -->
         <section id="signatarios">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 border-l-4 border-bfc-gold pl-4">Os signatários</h3>
-            <p class="text-sm text-gray-500 mb-6 pl-5">Perfil dos 270 sócios que subscreveram o requerimento, em números.</p>
+            <div class="section-head">
+                <p class="kicker">Os signatários</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-6">Perfil dos 270 sócios que subscreveram o requerimento, em números.</p>
 
-            <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
-                <p class="text-sm text-gray-700 leading-relaxed mb-5">
-                    Os <strong class="text-gray-900">270 signatários</strong> do requerimento são, na sua esmagadora maioria, sócios estabelecidos, com longa vinculação ao Clube. Não são recém-inscritos. <strong class="text-gray-900">Mediana do número de sócio: 2.586.</strong> 57% têm número inferior a 3.000.
-                </p>
+            <p class="prose-editorial text-[15px] mb-6">
+                Os <strong>270 signatários</strong> do requerimento são, na sua esmagadora maioria, sócios estabelecidos, com longa vinculação ao Clube. Não são recém-inscritos. <strong>Mediana do número de sócio: 2.586.</strong> 57% têm número inferior a 3.000.
+            </p>
 
-                <div class="space-y-2.5">
-                    <div class="flex items-center gap-3 text-xs">
-                        <span class="w-24 sm:w-40 text-right text-gray-600 shrink-0">Sócio n.º &lt; 1.000</span>
-                        <div class="flex-1 bg-gray-100 rounded-full h-5 relative overflow-hidden">
-                            <div class="bg-bfc-gold h-5 rounded-full" style="width: 61%"></div>
-                        </div>
-                        <span class="w-16 sm:w-20 text-gray-700 shrink-0"><strong>41</strong> (15%)</span>
+            <div class="space-y-2.5">
+                <div class="flex items-center gap-3 text-xs">
+                    <span class="w-24 sm:w-40 text-right text-neutral-600 shrink-0">Sócio n.º &lt; 1.000</span>
+                    <div class="flex-1 bg-black/5 h-5 relative overflow-hidden">
+                        <div class="bg-bfc-gold h-5" style="width: 61%"></div>
                     </div>
-                    <div class="flex items-center gap-3 text-xs">
-                        <span class="w-24 sm:w-40 text-right text-gray-600 shrink-0">1.000 a 2.999</span>
-                        <div class="flex-1 bg-gray-100 rounded-full h-5 relative overflow-hidden">
-                            <div class="bg-bfc-gold h-5 rounded-full" style="width: 100%"></div>
-                        </div>
-                        <span class="w-16 sm:w-20 text-gray-700 shrink-0"><strong>112</strong> (41%)</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-xs">
-                        <span class="w-24 sm:w-40 text-right text-gray-600 shrink-0">3.000 a 7.999</span>
-                        <div class="flex-1 bg-gray-100 rounded-full h-5 relative overflow-hidden">
-                            <div class="bg-bfc-gold h-5 rounded-full" style="width: 50%"></div>
-                        </div>
-                        <span class="w-16 sm:w-20 text-gray-700 shrink-0"><strong>56</strong> (21%)</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-xs">
-                        <span class="w-24 sm:w-40 text-right text-gray-600 shrink-0">Sócio n.º ≥ 8.000</span>
-                        <div class="flex-1 bg-gray-100 rounded-full h-5 relative overflow-hidden">
-                            <div class="bg-bfc-gold h-5 rounded-full" style="width: 54%"></div>
-                        </div>
-                        <span class="w-16 sm:w-20 text-gray-700 shrink-0"><strong>61</strong> (23%)</span>
-                    </div>
+                    <span class="w-16 sm:w-20 text-neutral-700 shrink-0"><strong>41</strong> (15%)</span>
                 </div>
-
-                <p class="text-xs text-gray-500 mt-5 leading-relaxed">
-                    Distribuição com base nos números de sócio auto-declarados pelos 270 signatários no acto da assinatura. A grande maioria está nas faixas de sócios antigos. A faixa 8.000+ inclui sócios mais recentes.
-                </p>
-
-                <div class="mt-6 pt-5 border-t border-gray-100">
-                    <h4 class="font-semibold text-gray-900 text-sm mb-2">Dos 270, quem foi reconhecido como válido</h4>
-                    <p class="text-sm text-gray-700 leading-relaxed">
-                        Na validação final na Secretaria do Clube (19 de Maio), <strong class="text-gray-900">140 assinaturas foram reconhecidas como válidas</strong> e <strong class="text-gray-900">130 não</strong>. Os 130 não validados são, na sua esmagadora maioria, sócios reais e estabelecidos no Clube, com quotas pagas até algum momento de 2025: não cumpriam a exigência específica do Art.º 31.º à data de 23 de Abril, mas existem como sócios e identificam-se com o Boavista. Não são identidades duplicadas, nem assinaturas fabricadas, nem inscrições recentes feitas para o efeito.
-                    </p>
-                    <p class="text-sm text-gray-700 leading-relaxed mt-2">
-                        A inelegibilidade técnica de uma assinatura para este requerimento específico não retira nada à legitimidade individual de quem assinou.
-                    </p>
+                <div class="flex items-center gap-3 text-xs">
+                    <span class="w-24 sm:w-40 text-right text-neutral-600 shrink-0">1.000 a 2.999</span>
+                    <div class="flex-1 bg-black/5 h-5 relative overflow-hidden">
+                        <div class="bg-bfc-gold h-5" style="width: 100%"></div>
+                    </div>
+                    <span class="w-16 sm:w-20 text-neutral-700 shrink-0"><strong>112</strong> (41%)</span>
                 </div>
+                <div class="flex items-center gap-3 text-xs">
+                    <span class="w-24 sm:w-40 text-right text-neutral-600 shrink-0">3.000 a 7.999</span>
+                    <div class="flex-1 bg-black/5 h-5 relative overflow-hidden">
+                        <div class="bg-bfc-gold h-5" style="width: 50%"></div>
+                    </div>
+                    <span class="w-16 sm:w-20 text-neutral-700 shrink-0"><strong>56</strong> (21%)</span>
+                </div>
+                <div class="flex items-center gap-3 text-xs">
+                    <span class="w-24 sm:w-40 text-right text-neutral-600 shrink-0">Sócio n.º ≥ 8.000</span>
+                    <div class="flex-1 bg-black/5 h-5 relative overflow-hidden">
+                        <div class="bg-bfc-gold h-5" style="width: 54%"></div>
+                    </div>
+                    <span class="w-16 sm:w-20 text-neutral-700 shrink-0"><strong>61</strong> (23%)</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-neutral-500 mt-5 leading-relaxed">
+                Distribuição com base nos números de sócio auto-declarados pelos 270 signatários no acto da assinatura. A grande maioria está nas faixas de sócios antigos. A faixa 8.000+ inclui sócios mais recentes.
+            </p>
+
+            <div class="mt-6 pt-5 border-t border-bfc-line">
+                <h4 class="font-display font-bold text-lg mb-2">Dos 270, quem foi reconhecido como válido</h4>
+                <p class="prose-editorial text-[15px]">
+                    Na validação final na Secretaria do Clube (19 de Maio), <strong>140 assinaturas foram reconhecidas como válidas</strong> e <strong>130 não</strong>. Os 130 não validados são, na sua esmagadora maioria, sócios reais e estabelecidos no Clube, com quotas pagas até algum momento de 2025: não cumpriam a exigência específica do Art.º 31.º à data de 23 de Abril, mas existem como sócios e identificam-se com o Boavista. Não são identidades duplicadas, nem assinaturas fabricadas, nem inscrições recentes feitas para o efeito.
+                </p>
+                <p class="prose-editorial text-[15px] mt-2">
+                    A inelegibilidade técnica de uma assinatura para este requerimento específico não retira nada à legitimidade individual de quem assinou.
+                </p>
             </div>
         </section>
 
         <!-- Contexto / Porquê esta petição -->
         <section id="contexto">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 border-l-4 border-bfc-gold pl-4">O contexto que originou a petição</h3>
-            <p class="text-sm text-gray-500 mb-6 pl-5">As razões que levaram 270 sócios a subscrever o requerimento. Continuam, na sua maioria, válidas.</p>
+            <div class="section-head">
+                <p class="kicker">O contexto que originou a petição</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-6">As razões que levaram 270 sócios a subscrever o requerimento. Continuam, na sua maioria, válidas.</p>
 
-            <div class="space-y-3">
-                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
-                    <div class="flex-shrink-0 w-8 h-8 bg-amber-100 border border-amber-200 rounded flex items-center justify-center text-amber-700 text-sm font-bold">!</div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">Estádio do Bessa em processo de leilão</p>
-                        <p class="text-xs text-gray-500">A Administradora de Insolvência colocou o Estádio do Bessa em leilão na Leilosoc, por um valor base de 31.068.781,72 €. Leilão temporariamente suspenso por 15 dias a 19 de Maio de 2026 a pedido de credores. O primeiro leilão de imóveis fechou a 10 de Abril, com vendas parciais.</p>
-                    </div>
+            <div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">Estádio do Bessa em processo de leilão</p>
+                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">A Administradora de Insolvência colocou o Estádio do Bessa em leilão na Leilosoc, por um valor base de 31.068.781,72 €. Leilão temporariamente suspenso por 15 dias a 19 de Maio de 2026 a pedido de credores. O primeiro leilão de imóveis fechou a 10 de Abril, com vendas parciais.</p>
                 </div>
-                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
-                    <div class="flex-shrink-0 w-8 h-8 bg-amber-100 border border-amber-200 rounded flex items-center justify-center text-amber-700 text-sm font-bold">!</div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">Direcção afastada da gestão do clube</p>
-                        <p class="text-xs text-gray-500">A 18 de Fevereiro de 2026, a Administradora de Insolvência decidiu prescindir da coadjuvação da Direcção na gestão, após falhas no depósito de 96.000 € (prestação aos credores) e 54.180 € (despesas correntes). A gestão passa a ser assegurada pela AI e pessoa a indicar, com acordo da Comissão de Credores.</p>
-                    </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">Direcção afastada da gestão do clube</p>
+                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">A 18 de Fevereiro de 2026, a Administradora de Insolvência decidiu prescindir da coadjuvação da Direcção na gestão, após falhas no depósito de 96.000 € (prestação aos credores) e 54.180 € (despesas correntes). A gestão passa a ser assegurada pela AI e pessoa a indicar, com acordo da Comissão de Credores.</p>
                 </div>
-                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
-                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 border border-red-200 rounded flex items-center justify-center text-red-600 text-sm font-bold">!</div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">O Clube sobrevive com donativos</p>
-                        <p class="text-xs text-gray-500">As despesas correntes mensais (50.000-55.000 €/mês) são asseguradas por donativos externos com carácter liberatório. A Direcção não consegue garantir estes pagamentos com recursos próprios.</p>
-                    </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">O Clube sobrevive com donativos</p>
+                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">As despesas correntes mensais (50.000-55.000 €/mês) são asseguradas por donativos externos com carácter liberatório. A Direcção não consegue garantir estes pagamentos com recursos próprios.</p>
                 </div>
-                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
-                    <div class="flex-shrink-0 w-8 h-8 bg-orange-100 border border-orange-200 rounded flex items-center justify-center text-orange-600 text-sm font-bold">!</div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">Modalidades em colapso, promessas incumpridas</p>
-                        <p class="text-xs text-gray-500">Andebol extinto (11 equipas), futsal em desistência parcial, clube sem equipa sénior de futebol. Várias dezenas de atletas ficaram sem clube. Ver o registo completo em <a href="promessas.html" class="text-bfc-gold hover:underline">Promessas</a>.</p>
-                    </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">Modalidades em colapso, promessas incumpridas</p>
+                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">Andebol extinto (11 equipas), futsal em desistência parcial, clube sem equipa sénior de futebol. Várias dezenas de atletas ficaram sem clube. Ver o registo completo em <a href="promessas.html" class="underline underline-offset-2 hover:text-bfc-black">Promessas</a>.</p>
                 </div>
-                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
-                    <div class="flex-shrink-0 w-8 h-8 bg-yellow-100 border border-yellow-200 rounded flex items-center justify-center text-yellow-600 text-sm font-bold">!</div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">Estádio do Bessa abandonado e interditado</p>
-                        <p class="text-xs text-gray-500">Interditado por questões de segurança desde Agosto de 2025. Nenhuma equipa joga no estádio. Imediações tornaram-se ponto de venda de droga (JN, Janeiro de 2026; reportagem da JPN, Março de 2026).</p>
-                    </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">Estádio do Bessa abandonado e interditado</p>
+                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">Interditado por questões de segurança desde Agosto de 2025. Nenhuma equipa joga no estádio. Imediações tornaram-se ponto de venda de droga (JN, Janeiro de 2026; reportagem da JPN, Março de 2026).</p>
                 </div>
-                <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3">
-                    <div class="flex-shrink-0 w-8 h-8 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-gray-600 text-sm font-bold">!</div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">Credores votaram pela liquidação</p>
-                        <p class="text-xs text-gray-500">A Assembleia de credores de 5 de Setembro de 2025 rejeitou o plano de recuperação e votou pela liquidação do clube. Pagamentos acordados não foram cumpridos. Pedido posterior da Direcção para suspensão da liquidação foi indeferido pelo Tribunal a 18 de Maio de 2026.</p>
-                    </div>
+                <div class="rule-thin py-4 border-b border-bfc-line">
+                    <p class="font-display font-bold text-lg">Credores votaram pela liquidação</p>
+                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">A Assembleia de credores de 5 de Setembro de 2025 rejeitou o plano de recuperação e votou pela liquidação do clube. Pagamentos acordados não foram cumpridos. Pedido posterior da Direcção para suspensão da liquidação foi indeferido pelo Tribunal a 18 de Maio de 2026.</p>
                 </div>
             </div>
         </section>
 
         <!-- Texto Integral do Requerimento -->
         <section id="requerimento">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 border-l-4 border-bfc-gold pl-4">Texto integral do requerimento</h3>
-            <p class="text-sm text-gray-500 mb-6 pl-5">O documento entregue à Mesa da Assembleia Geral.</p>
+            <div class="section-head">
+                <p class="kicker">Texto integral do requerimento</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-6">O documento entregue à Mesa da Assembleia Geral.</p>
 
-            <details class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-                <summary class="px-5 sm:px-6 py-4 cursor-pointer font-bold text-sm hover:bg-gray-50 transition-colors flex items-center justify-between">
-                    <span class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                        Ver o texto do requerimento à Mesa da Assembleia Geral
-                    </span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <details class="border border-bfc-line bg-white/60">
+                <summary class="px-5 py-4 cursor-pointer font-display font-bold text-base hover:bg-black/5 transition-colors flex items-center justify-between gap-3">
+                    <span>Ver o texto do requerimento à Mesa da Assembleia Geral</span>
+                    <svg class="w-5 h-5 text-neutral-400 chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </summary>
-                <div class="px-5 sm:px-6 pb-5 text-sm text-gray-600 leading-relaxed space-y-4 border-t border-gray-100 pt-4">
-                    <p class="font-semibold text-gray-900">Exmo. Senhor Presidente da Mesa da Assembleia Geral do Boavista Futebol Clube</p>
+                <div class="px-5 pb-5 prose-editorial text-[15px] space-y-4 border-t border-bfc-line pt-4">
+                    <p class="font-bold">Exmo. Senhor Presidente da Mesa da Assembleia Geral do Boavista Futebol Clube</p>
                     <p>
                         Os abaixo-assinados, sócios efectivos do Boavista Futebol Clube na plenitude dos seus direitos, ao abrigo do disposto no n.º 2 do Art.º 67.º dos Estatutos do Boavista Futebol Clube, vêm requerer a V. Exa., com a máxima urgência, a convocação de uma <strong>Assembleia Geral Extraordinária</strong>, com a seguinte ordem de trabalhos:
                     </p>
-                    <div class="bg-gray-50 rounded-lg p-4 space-y-3">
+                    <div class="border-l-2 border-bfc-gold pl-4 space-y-3">
                         <p><strong>PONTO 1</strong> - Deliberação sobre a destituição da Direção em exercício, com fundamento na impossibilidade superveniente de exercício das respectivas funções, resultante da cessação, por decisão da Administradora de Insolvência de 18 de Fevereiro de 2026, da coadjuvação da Direção na gestão do estabelecimento do Clube, bem como na gestão que conduziu à declaração de insolvência e à perda de confiança da Administradora de Insolvência e da Comissão de Credores.</p>
                         <p><strong>PONTO 2</strong> - Nomeação de uma Comissão Administrativa transitória para assegurar a gestão corrente do Clube até à realização de novas eleições, com fixação da respectiva composição, competências e prazo de mandato.</p>
                         <p><strong>PONTO 3</strong> - Atribuição de mandato à Comissão Administrativa para representar institucionalmente o Clube e dialogar com a Administradora de Insolvência, a Comissão de Credores e o Tribunal, com vista à viabilização de uma solução de recuperação ou continuidade da actividade do Boavista Futebol Clube, e fixação de prazo para a convocação de eleições para os Órgãos Sociais.</p>
@@ -244,8 +291,7 @@
                     <p>
                         Declaro, por minha honra e sob compromisso de veracidade, que os dados abaixo indicados são verdadeiros, que sou sócio efectivo do Boavista Futebol Clube na plenitude dos meus direitos, e que subscrevo integralmente o presente requerimento de convocação de Assembleia Geral Extraordinária.
                     </p>
-                    <a href="docs/requerimento-ag-extraordinaria.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-2 text-xs font-semibold text-gray-900 bg-bfc-gold hover:bg-yellow-500 px-3 py-1.5 rounded-md transition-colors">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <a href="docs/requerimento-ag-extraordinaria.pdf" target="_blank" rel="noopener" class="inline-block mt-2 text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-black border border-bfc-black px-3 py-1.5 hover:bg-bfc-black hover:text-white transition-colors">
                         Versão integral em PDF
                     </a>
                 </div>
@@ -254,67 +300,71 @@
 
         <!-- Base Legal -->
         <section id="base-legal">
-            <h3 class="text-xl font-bold text-gray-900 mb-2 border-l-4 border-bfc-gold pl-4">Base legal</h3>
-            <p class="text-sm text-gray-500 mb-6 pl-5">Os artigos estatutários e a legislação que sustentaram o requerimento.</p>
+            <div class="section-head">
+                <p class="kicker">Base legal</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-6">Os artigos estatutários e a legislação que sustentaram o requerimento.</p>
 
-            <div class="space-y-4">
-                <div class="bg-amber-50 border-l-4 border-bfc-gold p-4 rounded-r-lg">
-                    <p class="text-xs font-bold text-amber-800 mb-2">Art.º 67.º n.º 2 dos Estatutos do Boavista FC</p>
-                    <p class="text-sm text-amber-900 leading-relaxed italic">
+            <div class="space-y-5">
+                <div class="border-l-2 border-bfc-gold pl-4 py-1">
+                    <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-golddark mb-2">Art.º 67.º n.º 2 dos Estatutos do Boavista FC</p>
+                    <p class="prose-editorial text-[15px] italic">
                         "A Assembleia Geral reúne extraordinariamente, em qualquer data, a requerimento de um quinto dos Sócios efectivos, na plenitude dos seus direitos, desde que no acto da entrega do requerimento provem ter depositado na Secretaria do Clube a quantia julgada necessária para garantir as despesas inerentes à realização da Assembleia Geral Extraordinária."
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div class="bg-white rounded-lg border border-gray-200 p-4">
-                        <p class="text-xs font-bold text-gray-500 mb-1">Art.º 58.º</p>
-                        <p class="text-sm text-gray-600">A Assembleia Geral é <strong>"a autoridade suprema do Clube"</strong>.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="border-t-2 border-bfc-black pt-2.5">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500 mb-1">Art.º 58.º</p>
+                        <p class="text-sm text-neutral-700">A Assembleia Geral é <strong>"a autoridade suprema do Clube"</strong>.</p>
                     </div>
-                    <div class="bg-white rounded-lg border border-gray-200 p-4">
-                        <p class="text-xs font-bold text-gray-500 mb-1">Art.º 64.º</p>
-                        <p class="text-sm text-gray-600">A AG tem <strong>"competência ilimitada"</strong> para decidir sobre todos os assuntos de interesse para a vida do Clube.</p>
+                    <div class="border-t-2 border-bfc-black pt-2.5">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500 mb-1">Art.º 64.º</p>
+                        <p class="text-sm text-neutral-700">A AG tem <strong>"competência ilimitada"</strong> para decidir sobre todos os assuntos de interesse para a vida do Clube.</p>
                     </div>
-                    <div class="bg-white rounded-lg border border-gray-200 p-4">
-                        <p class="text-xs font-bold text-gray-500 mb-1">Art.º 31.º</p>
-                        <p class="text-sm text-gray-600">A plenitude de direitos resulta de ter pago a quota do mês anterior (salvo isenção), nada dever ao cofre, e não estar a cumprir penalidade.</p>
+                    <div class="border-t-2 border-bfc-black pt-2.5">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500 mb-1">Art.º 31.º</p>
+                        <p class="text-sm text-neutral-700">A plenitude de direitos resulta de ter pago a quota do mês anterior (salvo isenção), nada dever ao cofre, e não estar a cumprir penalidade.</p>
                     </div>
-                    <div class="bg-white rounded-lg border border-gray-200 p-4">
-                        <p class="text-xs font-bold text-gray-500 mb-1">Art.º 36.º n.º 1</p>
-                        <p class="text-sm text-gray-600">As quotas vencem no primeiro dia do mês a que digam respeito e devem ser pagas até ao dia 1 do mês seguinte.</p>
+                    <div class="border-t-2 border-bfc-black pt-2.5">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500 mb-1">Art.º 36.º n.º 1</p>
+                        <p class="text-sm text-neutral-700">As quotas vencem no primeiro dia do mês a que digam respeito e devem ser pagas até ao dia 1 do mês seguinte.</p>
                     </div>
                 </div>
 
-                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
-                    <p class="text-xs font-bold text-blue-800 mb-2">Validade das assinaturas digitais</p>
-                    <p class="text-sm text-blue-900 leading-relaxed">
+                <div class="border-l-2 border-bfc-black pl-4 py-1">
+                    <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500 mb-2">Validade das assinaturas digitais</p>
+                    <p class="text-sm text-neutral-700 leading-relaxed">
                         O <strong>Regulamento eIDAS</strong> (Regulamento (UE) n.º 910/2014) estabelece que uma assinatura electrónica <strong>não pode ser recusada como prova em processos judiciais</strong> pelo simples facto de ser electrónica (Art.º 25.º n.º 1). Em Portugal, o <strong>Decreto-Lei n.º 12/2021</strong> transpõe este regulamento. Os Estatutos do BFC não exigem assinaturas manuscritas para requerimentos de convocação de AG.
                     </p>
                 </div>
 
-                <p class="text-xs text-gray-400">
-                    Fontes: <a href="https://boavistafc.pt/wp-content/uploads/2019/07/estatutos.pdf" target="_blank" rel="noopener noreferrer" class="text-bfc-gold hover:underline">Estatutos do BFC (PDF)</a>
-                    &middot; <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=celex%3A32014R0910" target="_blank" rel="noopener noreferrer" class="text-bfc-gold hover:underline">Regulamento eIDAS (UE)</a>
+                <p class="text-xs text-neutral-500">
+                    Fontes: <a href="https://boavistafc.pt/wp-content/uploads/2019/07/estatutos.pdf" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-bfc-black">Estatutos do BFC (PDF)</a>
+                    &middot; <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=celex%3A32014R0910" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-bfc-black">Regulamento eIDAS (UE)</a>
                 </p>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="max-w-4xl mx-auto px-4 py-6">
-            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-500">
-                <a href="index.html" class="hover:text-gray-900">Início</a>
-                <a href="cronologia.html" class="hover:text-gray-900">Cronologia</a>
-                <a href="promessas.html" class="hover:text-gray-900">Promessas</a>
-                <a href="peticao.html" class="hover:text-gray-900">Petição (arquivo)</a>
-                <a href="sobre.html" class="hover:text-gray-900">Sobre</a>
+    <footer class="border-t-2 border-bfc-black mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-600">
+                <a href="index.html" class="hover:text-bfc-black">Início</a>
+                <a href="cronologia.html" class="hover:text-bfc-black">Cronologia</a>
+                <a href="promessas.html" class="hover:text-bfc-black">Promessas</a>
+                <a href="dossier-insolvencias.html" class="hover:text-bfc-black">Dossier</a>
+                <a href="peticao.html" class="hover:text-bfc-black">Petição (arquivo)</a>
+                <a href="sobre.html" class="hover:text-bfc-black">Sobre</a>
             </div>
-            <div class="mt-4 pt-4 border-t border-gray-200">
-                <p class="text-xs text-gray-400 text-center leading-relaxed">
+            <div class="mt-5 pt-5 border-t border-bfc-line">
+                <p class="text-xs text-neutral-500 text-center leading-relaxed max-w-2xl mx-auto">
                     Iniciativa independente de sócios do Boavista FC. Sem afiliação com o Clube, os seus órgãos sociais, qualquer grupo, facção ou candidatura. Dados de fontes públicas; podem conter erros que aceitamos corrigir.
                 </p>
             </div>
         </div>
+        <div class="xadrez" aria-hidden="true"></div>
     </footer>
 
     <script>

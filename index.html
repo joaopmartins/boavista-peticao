@@ -3,218 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidos Pelo Boavista - Voz crítica e construtiva de sócios do BFC</title>
-    <meta name="description" content="Voz crítica e construtiva de sócios do Boavista FC. A petição de Assembleia Geral Extraordinária com 270 assinaturas encerrou a 19 de Maio de 2026, com 140 validadas sobre 974 sócios efectivos (quinto: 195). O movimento continua, acompanhando o processo de insolvência, as decisões dos órgãos sociais e o cumprimento das promessas eleitorais.">
+    <title>Unidos Pelo Boavista - Observatório independente de sócios do BFC</title>
+    <meta name="description" content="Observatório independente de sócios do Boavista FC: o estado do processo de insolvência do Clube e da SAD, cronologia dos acontecimentos, registo das promessas eleitorais e arquivo da petição de AG Extraordinária.">
     <link rel="canonical" href="https://unidospeloboavista.pt/">
-    <meta name="theme-color" content="#d4af37">
+    <meta name="theme-color" content="#141414">
     <link rel="icon" type="image/png" href="assets/logo-upb.png">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://unidospeloboavista.pt/">
     <meta property="og:site_name" content="Unidos Pelo Boavista">
-    <meta property="og:title" content="Unidos Pelo Boavista - Voz crítica e construtiva de sócios do BFC">
-    <meta property="og:description" content="A petição de Assembleia Geral Extraordinária encerrou a 19 de Maio com 140 assinaturas validadas, abaixo do quinto estatutário de 195. O movimento continua.">
+    <meta property="og:title" content="Unidos Pelo Boavista - Observatório independente de sócios do BFC">
+    <meta property="og:description" content="O estado do Clube e da SAD, a cronologia dos acontecimentos e o registo das promessas eleitorais. Voz crítica e construtiva de sócios do Boavista FC.">
     <meta property="og:image" content="https://unidospeloboavista.pt/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="670">
     <meta property="og:locale" content="pt_PT">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Unidos Pelo Boavista - Voz crítica e construtiva de sócios do BFC">
-    <meta name="twitter:description" content="A petição de AG Extraordinária encerrou a 19 de Maio com 140 validadas, abaixo do quinto (195). O movimento continua.">
+    <meta name="twitter:title" content="Unidos Pelo Boavista - Observatório independente de sócios do BFC">
+    <meta name="twitter:description" content="O estado do Clube e da SAD, a cronologia dos acontecimentos e o registo das promessas eleitorais.">
     <meta name="twitter:image" content="https://unidospeloboavista.pt/assets/og-image.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            theme: { extend: { colors: { bfc: { black: '#1a1a1a', white: '#f5f5f5', gold: '#d4af37' } } } }
+            theme: { extend: {
+                colors: { bfc: { black: '#141414', paper: '#f7f5f0', gold: '#d4af37', golddark: '#8f6f1f', line: '#dcd7cb' } },
+                fontFamily: { display: ['Newsreader', 'Georgia', 'serif'] }
+            } }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50 text-gray-900 min-h-screen">
+<body class="bg-bfc-paper text-bfc-black min-h-screen">
 
-    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="xadrez" aria-hidden="true"></div>
+
+    <header class="bg-bfc-paper/95 backdrop-blur sticky top-0 z-50 border-b-2 border-bfc-black">
         <div class="max-w-4xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between gap-3">
                 <a href="index.html" class="flex items-center gap-3 flex-shrink-0 min-w-0">
-                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0">
+                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-10 h-10 sm:w-11 sm:h-11 object-contain flex-shrink-0">
                     <div class="min-w-0">
-                        <h1 class="text-sm sm:text-lg font-bold truncate">Unidos Pelo Boavista</h1>
-                        <p class="text-xs text-gray-500 hidden sm:block">Voz crítica e construtiva de sócios do BFC</p>
+                        <h1 class="font-display font-bold text-lg sm:text-xl leading-none truncate">Unidos Pelo Boavista</h1>
+                        <p class="text-[10px] uppercase tracking-[0.16em] text-neutral-500 hidden sm:block mt-1">Observatório independente de sócios do BFC</p>
                     </div>
                 </a>
-                <nav class="hidden md:flex items-center gap-1 text-sm">
-                    <a href="cronologia.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Cronologia</a>
-                    <a href="promessas.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Promessas</a>
-                    <a href="peticao.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Petição</a>
-                    <a href="sobre.html" class="px-3 py-2 rounded-md font-medium transition-colors text-gray-700 hover:bg-gray-100">Sobre</a>
+                <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold uppercase tracking-[0.14em]">
+                    <a href="cronologia.html" class="text-neutral-600 hover:text-bfc-black py-2">Cronologia</a>
+                    <a href="promessas.html" class="text-neutral-600 hover:text-bfc-black py-2">Promessas</a>
+                    <a href="sobre.html" class="text-neutral-600 hover:text-bfc-black py-2">Sobre</a>
                 </nav>
-                <button id="nav-toggle" class="md:hidden flex-shrink-0 p-2 -mr-2 text-gray-700 hover:bg-gray-100 rounded-md" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+                <button id="nav-toggle" class="md:hidden flex-shrink-0 p-2 -mr-2 text-bfc-black hover:bg-black/5" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
             </div>
-            <nav id="mobile-nav" class="hidden md:hidden mt-3 pt-3 border-t border-gray-100 flex flex-col gap-1 text-sm">
-                <a href="cronologia.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Cronologia</a>
-                <a href="promessas.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Promessas</a>
-                <a href="peticao.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Petição</a>
-                <a href="sobre.html" class="px-3 py-2 rounded-md font-medium transition-colors block text-gray-700 hover:bg-gray-100">Sobre</a>
+            <nav id="mobile-nav" class="hidden md:hidden mt-3 pt-3 border-t border-bfc-line flex flex-col gap-1 text-[12px] font-bold uppercase tracking-[0.14em]">
+                <a href="cronologia.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Cronologia</a>
+                <a href="promessas.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Promessas</a>
+                <a href="sobre.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Sobre</a>
             </nav>
         </div>
     </header>
 
     <!-- Barra de última actualização (dinâmica, ligada à cronologia) -->
-    <a id="update-banner" href="cronologia.html" class="block bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 text-white transition-colors">
-        <div class="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-x-2.5 gap-y-1 text-sm text-center flex-wrap">
-            <span class="flex-shrink-0 inline-flex items-center gap-1.5 font-bold text-bfc-gold">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-bfc-gold opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-bfc-gold"></span>
-                </span>
+    <a id="update-banner" href="cronologia.html" class="block bg-bfc-black hover:bg-neutral-800 text-white transition-colors">
+        <div class="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-x-3 gap-y-1 text-[13px] text-center flex-wrap">
+            <span class="flex-shrink-0 text-[10px] font-bold uppercase tracking-[0.16em] text-bfc-gold">
                 Atualizado <span id="banner-date"></span>
             </span>
-            <span class="hidden sm:inline text-gray-500">·</span>
-            <span id="banner-latest" class="hidden sm:inline truncate max-w-[45ch] text-gray-200"></span>
-            <span class="flex-shrink-0 font-semibold text-bfc-gold whitespace-nowrap">Ver cronologia &rarr;</span>
+            <span class="hidden sm:inline text-neutral-500">|</span>
+            <span id="banner-latest" class="hidden sm:inline truncate max-w-[45ch] text-neutral-200 font-display"></span>
+            <span class="flex-shrink-0 text-[10px] font-bold uppercase tracking-[0.16em] text-bfc-gold whitespace-nowrap">Ver cronologia &rarr;</span>
         </div>
     </a>
 
-    <!-- Hero (compacto) -->
-    <section id="hero" class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 text-gray-900 py-5 sm:py-6 border-b-4 border-bfc-gold">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-xl sm:text-2xl font-black text-gray-900">A petição encerra. O movimento continua.</h2>
-            <p class="mt-1.5 text-sm text-gray-600 max-w-2xl mx-auto">
-                Acompanhamento independente do processo de insolvência, das decisões dos órgãos sociais e das promessas eleitorais da Direcção.
-            </p>
-        </div>
-    </section>
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-14">
 
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
-
-        <!-- Comunicado -->
-        <section id="comunicado">
-            <h2 class="text-xl font-bold text-gray-900 mb-2 border-l-4 border-bfc-gold pl-4">Comunicado de 20 de Maio de 2026</h2>
-            <p class="text-sm text-gray-500 mb-6 pl-5">Balanço do requerimento e continuidade do movimento</p>
-
-            <div class="bg-white rounded-xl border border-gray-200 p-5 sm:p-8 space-y-4 text-[15px] text-gray-700 leading-relaxed">
-                <p>
-                    O movimento "Unidos Pelo Boavista" entregou, a 23 de Abril, um requerimento de Assembleia Geral Extraordinária com 270 assinaturas, ao abrigo do Art.º 67.º n.º 2 dos Estatutos. No dia 19 de Maio, em reunião com a Secretaria do Clube, conduziu-se a validação final no próprio sistema do Clube, com a nossa observação directa: <strong class="text-gray-900">140 assinaturas foram reconhecidas válidas</strong>, sobre um universo de <strong class="text-gray-900">974 sócios efectivos</strong> com plenitude de direitos a 23 de Abril, cujo quinto estatutário se cifra em <strong class="text-gray-900">195</strong>. O requerimento não cumpre o limite estatutário para convocação de Assembleia Geral Extraordinária.
-                </p>
-                <p>
-                    Reconhecemos o resultado e agradecemos à Secretaria do Clube a transparência demonstrada nesta sessão final, à Mesa da Assembleia Geral o papel de mediação, e a todos os 270 sócios que assinaram, em particular aos 140 cuja qualidade de sócios em plenitude de direitos foi formalmente reconhecida.
-                </p>
-                <p>
-                    Importa, em rigor de informação, deixar uma palavra sobre os 130 sócios cujas assinaturas não foram validadas. A esmagadora maioria deste grupo são sócios reais e estabelecidos no Clube, com quotas pagas até algum momento de 2025. Não são sócios inexistentes, nem identidades duplicadas, nem assinaturas fabricadas. São sócios que, à data de 23 de Abril, não cumpriam ainda assim a exigência do Art.º 31.º dos Estatutos por insuficiente actualização das quotas mais recentes. <strong class="text-gray-900">A inelegibilidade técnica não retira nada à legitimidade individual de quem assinou.</strong>
-                </p>
-
-                <h3 class="text-lg font-bold text-gray-900 pt-4">O que retemos deste processo</h3>
-                <p>
-                    A petição não atingiu o objectivo formal, mas o processo deixou três aprendizagens que justificam a continuidade do movimento.
-                </p>
-                <p>
-                    <strong class="text-gray-900">Primeira.</strong> Existe uma fatia significativa de sócios que, à data, não tinha noção de estar em situação de quotas em atraso. A comunicação do Clube com a sua base associativa precisa de melhorar consideravelmente, e isso ficou demonstrado em factos.
-                </p>
-                <p>
-                    <strong class="text-gray-900">Segunda.</strong> 140 sócios efectivos em plenitude de direitos, em três semanas e através de um processo formal exigente, manifestaram-se sobre o estado do Clube. Não é um número de protesto pontual; é um número de mobilização sustentada.
-                </p>
-                <p>
-                    <strong class="text-gray-900">Terceira.</strong> O contexto em que esta petição nasceu não mudou. O Clube continua em processo de insolvência, sob risco patrimonial real. A 18 de Maio, o Juízo de Comércio de Vila Nova de Gaia indeferiu o requerimento da Direcção para suspensão da liquidação, com fundamento em não ter sido apresentado qualquer plano de insolvência. As verbas relevantes continuam sob potencial alienação.
-                </p>
-
-                <h3 class="text-lg font-bold text-gray-900 pt-4">O que continuamos a fazer</h3>
-                <p>
-                    A petição encerra. O movimento não. "Unidos Pelo Boavista" continua, a partir de hoje, como:
-                </p>
-                <ul class="list-none space-y-2 pl-0">
-                    <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-bfc-gold mt-2"></span><span><strong class="text-gray-900">Plataforma de fiscalização</strong> sobre o estado do Clube, com particular atenção à transparência das decisões da Direcção e dos órgãos sociais.</span></li>
-                    <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-bfc-gold mt-2"></span><span><strong class="text-gray-900">Observatório</strong> independente do processo de insolvência e dos acontecimentos judiciais e desportivos que afectem o Clube.</span></li>
-                    <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-bfc-gold mt-2"></span><span><strong class="text-gray-900">Espaço de discussão</strong> entre sócios sobre o futuro do Boavista.</span></li>
-                </ul>
-                <p>
-                    O acompanhamento da timeline dos acontecimentos e do cumprimento das promessas eleitorais da actual Direcção, já iniciado neste sítio, é a espinha dorsal deste trabalho daqui em diante.
-                </p>
-                <p>
-                    A nossa postura permanece a mesma: cordial, crítica e construtiva. Não somos opositores por princípio. Somos sócios que reivindicam o direito a saber, a debater e a acompanhar. A Assembleia Geral é, nos termos do Art.º 58.º dos Estatutos, a autoridade suprema do Clube. Que assim continue a ser, dentro e fora dos seus actos formais.
-                </p>
-                <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-gray-600 pt-4 border-t border-gray-100">
-                    <span><strong class="text-gray-900">270</strong> entregues</span>
-                    <span><strong class="text-gray-900">140</strong> válidas</span>
-                    <span>limite necessário: <strong class="text-gray-900">195</strong> (entre 974 sócios efectivos)</span>
-                </div>
-                <p class="text-sm text-gray-500 pt-4">
-                    Porto, 20 de Maio de 2026<br>
-                    <em>Unidos Pelo Boavista</em>
-                </p>
+        <!-- Ponto de situação (editorial, actualizar manualmente a cada desenvolvimento relevante) -->
+        <section id="estado">
+            <div class="flex items-baseline justify-between gap-4 flex-wrap border-b-2 border-bfc-black pb-2">
+                <p class="kicker">O estado do Clube</p>
+                <p class="text-xs text-neutral-500">Ponto de situação a 3 de Julho de 2026</p>
             </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-[2.75rem] leading-[1.08] mt-6 tracking-tight">
+                O Bessa ficou sem comprador. O resto do património começou a ser vendido.
+            </h2>
+            <p class="font-display italic text-lg sm:text-xl text-neutral-600 leading-relaxed mt-4 max-w-3xl">
+                O leilão dos imóveis do Clube fechou a 9 de Junho sem qualquer proposta pelo estádio. A SAD aguarda decisão sobre o plano de recuperação até 31 de Julho. E as renovações de quotas dos sócios continuam congeladas.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 mt-9 sm:divide-x divide-bfc-line gap-y-8">
+                <div class="sm:pr-7">
+                    <p class="kicker mb-3">O Clube</p>
+                    <p class="prose-editorial text-[15px] leading-relaxed">
+                        O Boavista FC está insolvente e em liquidação. No leilão que terminou a 9 de Junho, o Estádio do Bessa não recebeu qualquer proposta (valor mínimo de 27 milhões de euros) e o complexo desportivo foi vendido por 6,5 milhões, a comprador não divulgado. A aceitação da venda cabe à comissão de credores e à Administradora de Insolvência. A Direcção está afastada da gestão desde Fevereiro e a actividade sobrevive de donativos.
+                    </p>
+                </div>
+                <div class="sm:px-7">
+                    <p class="kicker mb-3">A SAD</p>
+                    <p class="prose-editorial text-[15px] leading-relaxed">
+                        A Boavista SAD, de Gérard Lopez, viu a liquidação ser decretada pelo tribunal a 12 de Maio. O administrador de insolvência apresentou entretanto um novo plano de recuperação, com aprovação prevista até 31 de Julho, que reduz a actividade desportiva ao mínimo e aposta nos sub-19 em 2026/27. Cerca de 1.500 atletas dependem de donativos mensais para continuar a competir.
+                    </p>
+                </div>
+                <div class="sm:pl-7">
+                    <p class="kicker mb-3">Frentes abertas</p>
+                    <ul class="space-y-2.5 text-[14px] text-neutral-700 leading-snug">
+                        <li class="flex gap-2"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-1.5"></span><span>Renovação de quotas e anuidades ainda congelada (comunicação da Direcção, 1 de Julho).</span></li>
+                        <li class="flex gap-2"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-1.5"></span><span>Decisão da comissão de credores sobre a venda do complexo desportivo por 6,5 milhões.</span></li>
+                        <li class="flex gap-2"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-1.5"></span><span>Plano de recuperação da SAD, com aprovação-alvo a 31 de Julho.</span></li>
+                        <li class="flex gap-2"><span class="flex-shrink-0 w-1.5 h-1.5 bg-bfc-gold mt-1.5"></span><span>Assembleia Municipal do Porto debate a salvaguarda do Bessa como património da cidade.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="dossier-insolvencias.html" class="group mt-9 flex items-center justify-between gap-4 border border-bfc-black px-4 sm:px-5 py-3.5 hover:bg-bfc-black hover:text-white transition-colors">
+                <span class="text-sm sm:text-[15px]"><span class="font-bold">Clube e SAD: dois processos, duas insolvências.</span> <span class="text-neutral-600 group-hover:text-neutral-300">Leia o dossier que explica o que é o quê.</span></span>
+                <span class="text-bfc-golddark group-hover:text-bfc-gold font-bold flex-shrink-0">&rarr;</span>
+            </a>
         </section>
 
         <!-- Últimos acontecimentos (preview) -->
         <section id="ultimos">
-            <div class="flex items-end justify-between mb-2 pl-4 border-l-4 border-bfc-gold">
-                <h2 class="text-xl font-bold text-gray-900">Últimos acontecimentos</h2>
-                <a href="cronologia.html" class="text-sm font-semibold text-bfc-gold hover:underline">Ver tudo →</a>
+            <div class="section-head">
+                <p class="kicker">Últimos acontecimentos</p>
+                <a href="cronologia.html" class="text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-golddark hover:text-bfc-black whitespace-nowrap">Ver tudo &rarr;</a>
             </div>
-            <p class="text-sm text-gray-500 mb-6 pl-5">Os cinco eventos mais recentes da cronologia do Clube.</p>
-            <div id="ultimos-content" class="space-y-3">
-                <p class="text-sm text-gray-400 italic">A carregar...</p>
+            <div id="ultimos-content" class="mt-2">
+                <p class="text-sm text-neutral-400 italic pt-4">A carregar...</p>
             </div>
         </section>
 
-        <!-- Cards para sub-páginas -->
+        <!-- Índice do site -->
         <section id="explorar">
-            <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-bfc-gold pl-4">Explorar</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <a href="cronologia.html" class="group bg-white rounded-xl border border-gray-200 p-5 hover:border-bfc-gold hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                            <svg class="w-5 h-5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <h3 class="font-bold text-gray-900 group-hover:text-bfc-gold transition-colors">Cronologia</h3>
+            <div class="section-head">
+                <p class="kicker">Neste site</p>
+            </div>
+            <div class="mt-2">
+                <a href="cronologia.html" class="group flex items-baseline justify-between gap-4 py-4 rule-thin">
+                    <div>
+                        <p class="font-display font-bold text-xl group-hover:underline underline-offset-4">Cronologia</p>
+                        <p class="text-sm text-neutral-600 mt-1">Os acontecimentos mais relevantes do Clube desde Janeiro de 2025, filtráveis por tema.</p>
                     </div>
-                    <p class="text-sm text-gray-600">Os acontecimentos mais relevantes do Clube desde Janeiro de 2025, filtráveis por tema.</p>
+                    <span class="text-bfc-golddark font-bold flex-shrink-0">&rarr;</span>
                 </a>
-
-                <a href="promessas.html" class="group bg-white rounded-xl border border-gray-200 p-5 hover:border-bfc-gold hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                            <svg class="w-5 h-5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                        </div>
-                        <h3 class="font-bold text-gray-900 group-hover:text-bfc-gold transition-colors">Promessas</h3>
+                <a href="promessas.html" class="group flex items-baseline justify-between gap-4 py-4 rule-thin">
+                    <div>
+                        <p class="font-display font-bold text-xl group-hover:underline underline-offset-4">Promessas</p>
+                        <p class="text-sm text-neutral-600 mt-1">O registo do cumprimento das promessas eleitorais da actual Direcção, categoria a categoria.</p>
                     </div>
-                    <p class="text-sm text-gray-600">O registo do cumprimento das promessas eleitorais da actual Direcção, categoria a categoria.</p>
+                    <span class="text-bfc-golddark font-bold flex-shrink-0">&rarr;</span>
                 </a>
-
-                <a href="peticao.html" class="group bg-white rounded-xl border border-gray-200 p-5 hover:border-bfc-gold hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
-                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                        </div>
-                        <h3 class="font-bold text-gray-900 group-hover:text-bfc-gold transition-colors">Petição</h3>
+                <a href="dossier-insolvencias.html" class="group flex items-baseline justify-between gap-4 py-4 rule-thin">
+                    <div>
+                        <p class="font-display font-bold text-xl group-hover:underline underline-offset-4">Dossier: as duas insolvências</p>
+                        <p class="text-sm text-neutral-600 mt-1">Clube e SAD são processos distintos, com juízes, administradores e consequências diferentes. Explicado sem juridiquês.</p>
                     </div>
-                    <p class="text-sm text-gray-600">Arquivo do processo encerrado a 19 de Maio: estado final, signatários, requerimento e base legal.</p>
+                    <span class="text-bfc-golddark font-bold flex-shrink-0">&rarr;</span>
+                </a>
+                <a href="peticao.html" class="group flex items-baseline justify-between gap-4 py-4 rule-thin border-b border-bfc-line">
+                    <div>
+                        <p class="font-display font-bold text-xl group-hover:underline underline-offset-4">Arquivo da petição</p>
+                        <p class="text-sm text-neutral-600 mt-1">O processo encerrado a 19 de Maio: comunicado, estado final, signatários, requerimento e base legal.</p>
+                    </div>
+                    <span class="text-bfc-golddark font-bold flex-shrink-0">&rarr;</span>
                 </a>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="max-w-4xl mx-auto px-4 py-6">
-            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-500">
-                <a href="index.html" class="hover:text-gray-900">Início</a>
-                <a href="cronologia.html" class="hover:text-gray-900">Cronologia</a>
-                <a href="promessas.html" class="hover:text-gray-900">Promessas</a>
-                <a href="peticao.html" class="hover:text-gray-900">Petição (arquivo)</a>
-                <a href="sobre.html" class="hover:text-gray-900">Sobre</a>
+    <footer class="border-t-2 border-bfc-black mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-600">
+                <a href="index.html" class="hover:text-bfc-black">Início</a>
+                <a href="cronologia.html" class="hover:text-bfc-black">Cronologia</a>
+                <a href="promessas.html" class="hover:text-bfc-black">Promessas</a>
+                <a href="dossier-insolvencias.html" class="hover:text-bfc-black">Dossier</a>
+                <a href="peticao.html" class="hover:text-bfc-black">Petição (arquivo)</a>
+                <a href="sobre.html" class="hover:text-bfc-black">Sobre</a>
             </div>
-            <div class="mt-4 pt-4 border-t border-gray-200">
-                <p class="text-xs text-gray-400 text-center leading-relaxed">
+            <div class="mt-5 pt-5 border-t border-bfc-line">
+                <p class="text-xs text-neutral-500 text-center leading-relaxed max-w-2xl mx-auto">
                     Iniciativa independente de sócios do Boavista FC. Sem afiliação com o Clube, os seus órgãos sociais, qualquer grupo, facção ou candidatura. Dados de fontes públicas; podem conter erros que aceitamos corrigir.
                 </p>
             </div>
         </div>
+        <div class="xadrez" aria-hidden="true"></div>
     </footer>
 
     <script>
@@ -256,31 +237,27 @@
                 if (bl && ordenados[0]) bl.textContent = ordenados[0].titulo;
 
                 const typeConfig = {
-                    governanca: { color: 'bg-gray-400', label: 'Governança' },
-                    financas: { color: 'bg-red-500', label: 'Finanças' },
-                    modalidades: { color: 'bg-orange-500', label: 'Modalidades' },
-                    estadio: { color: 'bg-yellow-500', label: 'Estádio' },
-                    sad: { color: 'bg-purple-500', label: 'SAD' }
+                    governanca: { label: 'Governança' },
+                    financas: { label: 'Finanças' },
+                    modalidades: { label: 'Modalidades' },
+                    estadio: { label: 'Estádio' },
+                    sad: { label: 'SAD' }
                 };
                 const container = document.getElementById('ultimos-content');
                 if (!container) return;
                 container.innerHTML = '';
                 eventos.forEach(ev => {
-                    const cfg = typeConfig[ev.tipo] || { color: 'bg-gray-400', label: ev.tipo };
+                    const cfg = typeConfig[ev.tipo] || { label: ev.tipo };
                     const dia = ev.data.split('-').reverse().join('/');
                     const div = document.createElement('div');
-                    div.className = 'bg-white rounded-lg border border-gray-200 p-4';
+                    div.className = 'rule-thin py-4';
                     div.innerHTML = `
-                        <div class="flex items-start gap-3">
-                            <div class="flex-shrink-0 mt-1.5 w-2.5 h-2.5 rounded-full ${cfg.color}" title="${cfg.label}"></div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex items-baseline justify-between gap-3 mb-1">
-                                    <p class="text-sm font-semibold text-gray-900 leading-snug">${ev.titulo}</p>
-                                    <span class="text-xs text-gray-500 whitespace-nowrap">${dia}</span>
-                                </div>
-                                <p class="text-sm text-gray-600 leading-relaxed">${ev.descricao}</p>
-                            </div>
+                        <div class="flex items-baseline gap-3">
+                            <span class="text-[11px] font-bold tracking-[0.08em] text-neutral-500 whitespace-nowrap tabular-nums">${dia}</span>
+                            <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-bfc-golddark">${cfg.label}</span>
                         </div>
+                        <p class="font-display font-bold text-lg sm:text-xl leading-snug mt-1.5">${ev.titulo}</p>
+                        <p class="text-sm text-neutral-600 leading-relaxed mt-1.5">${ev.descricao}</p>
                     `;
                     container.appendChild(div);
                 });

@@ -1,11 +1,84 @@
-/* Unidos Pelo Boavista - Custom Styles */
+/* Unidos Pelo Boavista - Design system editorial */
 
 /* Sticky offset */
-:root { --header-height: 58px; }
+:root {
+    --header-height: 58px;
+    --ink: #141414;
+    --paper: #f7f5f0;
+    --gold: #d4af37;
+    --gold-dark: #8f6f1f;
+    --line: #dcd7cb;
+}
 
 /* Anchor scroll offset for sticky header */
 section[id] {
     scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Faixa axadrezada (identidade Boavista) */
+.xadrez {
+    height: 8px;
+    background: repeating-conic-gradient(var(--ink) 0% 25%, transparent 0% 50%) 0 0 / 8px 8px;
+}
+.xadrez-thin {
+    height: 6px;
+    background: repeating-conic-gradient(var(--ink) 0% 25%, transparent 0% 50%) 0 0 / 6px 6px;
+}
+
+/* Regras tipográficas de jornal */
+.rule-double {
+    height: 6px;
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+.rule-thin {
+    border-top: 1px solid var(--line);
+}
+
+/* Kicker: etiqueta de secção em versaletes */
+.kicker {
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold-dark);
+}
+
+/* Título de secção editorial */
+.section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.5rem;
+}
+
+/* Corpo de texto longform */
+.prose-editorial {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #26251f;
+}
+.prose-editorial strong { color: var(--ink); }
+
+/* Capitular no primeiro parágrafo de um artigo */
+.dropcap::first-letter {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 700;
+    font-size: 3.4em;
+    float: left;
+    line-height: 0.82;
+    padding-right: 0.09em;
+    padding-top: 0.05em;
 }
 
 /* Progress bar animation */
@@ -14,10 +87,14 @@ section[id] {
 }
 
 /* Cronologia filter pills */
+.cronologia-filter {
+    border: 1px solid var(--line);
+    background: transparent;
+}
 .cronologia-filter.active {
-    background-color: #1a1a1a;
-    color: white;
-    border-color: #1a1a1a;
+    background-color: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
 }
 
 /* Details/summary styling */
@@ -78,7 +155,7 @@ details[open] summary .chevron {
 /* Focus styles */
 button:focus-visible,
 a:focus-visible {
-    outline: 2px solid #d4af37;
+    outline: 2px solid var(--gold);
     outline-offset: 2px;
 }
 
