@@ -205,9 +205,9 @@ function renderCronologia() {
             badge.innerHTML = `<span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-golddark"><span class="w-2 h-2 bg-bfc-gold"></span>Atualizado a ${d}</span>`;
             badge.classList.remove('hidden');
         }
-        // marca como recente tudo nos 40 dias anteriores ao evento mais recente
+        // marca como recente tudo nos 7 dias anteriores ao evento mais recente
         const recentCutoff = new Date(newest);
-        recentCutoff.setDate(recentCutoff.getDate() - 40);
+        recentCutoff.setDate(recentCutoff.getDate() - 7);
         eventos.forEach(e => { e._recente = new Date(e.data) >= recentCutoff; });
     }
 
