@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-07-16",
+  "atualizado": "2026-07-17",
   "eventos": [
     {
       "data": "2025-01-18",
@@ -354,6 +354,18 @@
       "titulo": "Bordéus, o outro clube de Gérard Lopez, excluído das ligas francesas e a caminho da liquidação",
       "descricao": "No mesmo dia do encerramento da actividade do Boavista, a DNCG (organismo de controlo financeiro do futebol francês) confirma em recurso a exclusão dos Girondins de Bordéus das competições nacionais, com despromoção à sexta divisão. O fundo Sparta Capital retirou-se do negócio por não conseguir reunir a garantia financeira de cerca de 9 milhões de euros, e a liquidação judicial da sociedade é esperada até ao fim do mês. Gérard Lopez, accionista maioritário da Boavista SAD e dono do Bordéus, arrisca inibição de gerir empresas em França por falha de gestão. Contexto directo para o fim dos donativos mensais que sustentavam o Boavista. Fontes: franceinfo, Foot Mercato, L'Équipe via imprensa, 15 de Julho de 2026.",
       "tipo": "sad"
+    },
+    {
+      "data": "2026-07-14",
+      "titulo": "Na véspera do encerramento, Direcção entrega plano de recuperação em tribunal",
+      "descricao": "A Direcção entrega no tribunal um plano de recuperação do Clube, na véspera da execução do encerramento pela Administradora de Insolvência. O conteúdo do plano (valores, financiamento, eventuais investidores) não foi divulgado publicamente. Para produzir efeitos, o plano precisa de ser admitido pelo tribunal e aprovado em assembleia de credores; Garrido Pereira afirma que os prazos 'dependem exclusivamente do tribunal'. Nota de contexto: a 18 de Maio o tribunal indeferira a suspensão da liquidação precisamente com fundamento na não apresentação de qualquer plano de insolvência. Fontes: TSF, Observador, Record/RTP, 16 e 17 de Julho de 2026.",
+      "tipo": "governanca"
+    },
+    {
+      "data": "2026-07-16",
+      "titulo": "Panteras Negras prometem acção judicial contra responsáveis pelo encerramento",
+      "descricao": "A claque Panteras Negras anuncia a intenção de intentar, até ao fim de Julho, uma acção judicial contra os responsáveis pelo encerramento do Boavista. Fonte: Observador, 16 de Julho de 2026.",
+      "tipo": "governanca"
     }
   ]
 }
