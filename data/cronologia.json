@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-07-16",
+  "atualizado": "2026-07-20",
   "eventos": [
     {
       "data": "2025-01-18",
@@ -354,6 +354,24 @@
       "titulo": "Bordéus, o outro clube de Gérard Lopez, excluído das ligas francesas e a caminho da liquidação",
       "descricao": "No mesmo dia do encerramento da actividade do Boavista, a DNCG (organismo de controlo financeiro do futebol francês) confirma em recurso a exclusão dos Girondins de Bordéus das competições nacionais, com despromoção à sexta divisão. O fundo Sparta Capital retirou-se do negócio por não conseguir reunir a garantia financeira de cerca de 9 milhões de euros, e a liquidação judicial da sociedade é esperada até ao fim do mês. Gérard Lopez, accionista maioritário da Boavista SAD e dono do Bordéus, arrisca inibição de gerir empresas em França por falha de gestão. Contexto directo para o fim dos donativos mensais que sustentavam o Boavista. Fontes: franceinfo, Foot Mercato, L'Équipe via imprensa, 15 de Julho de 2026.",
       "tipo": "sad"
+    },
+    {
+      "data": "2026-07-17",
+      "tipo": "governanca",
+      "titulo": "Movimento de sócios angaria a verba para reabrir o Bessa",
+      "descricao": "Um movimento de sócios, adeptos e encarregados de educação, apresentado como 'Movimento Salvar o Boavista' e criado por dois sócios, angaria em poucos dias a verba exigida pela Administradora de Insolvência para a retoma da actividade (cerca de 50 mil euros, noticiados). A campanha aceita donativos de qualquer valor, com uma camisola Kelme de baixo custo como contrapartida a partir de 50 euros, e diz que os fundos são auditados pelo próprio movimento. A Direcção requereu ao Tribunal a validação para concretizar a reabertura. Fontes: comunicado do Clube (17 de Julho), JN, SAPO/Lusa, Record."
+    },
+    {
+      "data": "2026-07-20",
+      "tipo": "governanca",
+      "titulo": "Instalações do Bessa reabrem e a equipa sénior é inscrita na AF Porto",
+      "descricao": "Com a verba assegurada, as instalações do Estádio do Bessa reabrem a 20 de Julho, permitindo o regresso aos treinos dos atletas das modalidades. O Clube formaliza também a inscrição da equipa sénior de futebol na Associação de Futebol do Porto, o que a coloca nos escalões distritais. A reabertura resolve as despesas correntes do mês; o processo de insolvência, a liquidação do património e a votação do plano de recuperação mantêm-se em aberto. Fontes: comunicado do Clube, Record, Notícias ao Minuto."
+    },
+    {
+      "data": "2026-07-20",
+      "tipo": "estadio",
+      "titulo": "Câmara do Porto e PS avançam com instrumentos de apoio ao Bessa",
+      "descricao": "Na sequência do debate na Assembleia Municipal de 29 de Junho, a Câmara Municipal do Porto une-se no apoio ao Boavista e afasta uma alteração ao Plano Director Municipal que afectasse a zona. O PS propõe a classificação da envolvente do Estádio do Bessa como Área de Reabilitação Urbana. São instrumentos políticos que podem condicionar o uso futuro do estádio e do terreno. Fontes: JN, Observador, MaisFutebol."
     }
   ]
 }
