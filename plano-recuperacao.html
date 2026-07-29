@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O plano de recuperação, explicado · Unidos Pelo Boavista</title>
+    <meta name="description" content="O que propõe o plano de insolvência apresentado em tribunal a 14 de Julho de 2026 pela Direcção do Boavista FC: tratamento de cada classe de credores, receitas projectadas, o que o documento não contém e os passos que faltam no processo.">
+    <link rel="canonical" href="https://unidospeloboavista.pt/plano-recuperacao.html">
+    <meta name="theme-color" content="#141414">
+    <link rel="icon" type="image/png" href="assets/logo-upb.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unidospeloboavista.pt/plano-recuperacao.html">
+    <meta property="og:site_name" content="Unidos Pelo Boavista">
+    <meta property="og:title" content="O plano de recuperação, explicado">
+    <meta property="og:description" content="O que o plano propõe a cada credor, de onde diz vir o dinheiro, o que não contém, e o que falta no processo.">
+    <meta property="og:image" content="https://unidospeloboavista.pt/assets/og-image.jpg">
+    <meta property="og:locale" content="pt_PT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="O plano de recuperação, explicado">
+    <meta name="twitter:description" content="O que o plano propõe a cada credor, de onde diz vir o dinheiro, o que não contém, e o que falta no processo.">
+    <meta name="twitter:image" content="https://unidospeloboavista.pt/assets/og-image.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { bfc: { black: '#141414', paper: '#f7f5f0', gold: '#d4af37', golddark: '#8f6f1f', line: '#dcd7cb' } },
+                fontFamily: { display: ['Newsreader', 'Georgia', 'serif'] }
+            } }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-bfc-paper text-bfc-black min-h-screen">
+
+    <div class="xadrez" aria-hidden="true"></div>
+
+    <header class="bg-bfc-paper/95 backdrop-blur sticky top-0 z-50 border-b-2 border-bfc-black">
+        <div class="max-w-4xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between gap-3">
+                <a href="index.html" class="flex items-center gap-3 flex-shrink-0 min-w-0">
+                    <img src="assets/logo-upb.png" alt="Unidos Pelo Boavista" class="w-10 h-10 sm:w-11 sm:h-11 object-contain flex-shrink-0">
+                    <div class="min-w-0">
+                        <h1 class="font-display font-bold text-lg sm:text-xl leading-none truncate">Unidos Pelo Boavista</h1>
+                        <p class="text-[10px] uppercase tracking-[0.16em] text-neutral-500 hidden sm:block mt-1">Observatório independente de sócios do BFC</p>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold uppercase tracking-[0.14em]">
+                    <a href="cronologia.html" class="text-neutral-600 hover:text-bfc-black py-2">Cronologia</a>
+                    <a href="documentos.html" class="text-neutral-600 hover:text-bfc-black py-2">Documentos</a>
+                    <a href="promessas.html" class="text-neutral-600 hover:text-bfc-black py-2">Promessas</a>
+                    <a href="sobre.html" class="text-neutral-600 hover:text-bfc-black py-2">Sobre</a>
+                </nav>
+                <button id="nav-toggle" class="md:hidden flex-shrink-0 p-2 -mr-2 text-bfc-black hover:bg-black/5" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <nav id="mobile-nav" class="hidden md:hidden mt-3 pt-3 border-t border-bfc-line flex flex-col gap-1 text-[12px] font-bold uppercase tracking-[0.14em]">
+                <a href="cronologia.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Cronologia</a>
+                <a href="documentos.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Documentos</a>
+                <a href="promessas.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Promessas</a>
+                <a href="sobre.html" class="px-1 py-2 block text-neutral-600 hover:text-bfc-black">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-10">
+
+        <header>
+            <p class="kicker">Dossier</p>
+            <h2 class="font-display font-bold text-3xl sm:text-[2.6rem] leading-[1.08] mt-4 tracking-tight">O plano de recuperação, explicado</h2>
+            <p class="font-display italic text-lg sm:text-xl text-neutral-600 leading-relaxed mt-4">
+                A 14 de Julho de 2026, a Direcção do Boavista FC apresentou em tribunal um plano de insolvência com finalidade recuperatória. Este dossier resume o que o documento propõe, de onde diz vir o dinheiro, o que não contém e o que falta acontecer para que produza efeitos.
+            </p>
+            <p class="text-xs text-neutral-500 mt-4">Actualizado a 29 de Julho de 2026 · Processo 7629/23.7T8VNG, Juízo de Comércio de V. N. de Gaia · O documento integral está disponível em <a href="documentos.html" class="underline underline-offset-2 hover:text-bfc-black">Documentos</a></p>
+        </header>
+
+        <div class="rule-double mt-8"></div>
+
+        <!-- 1. Onde estamos no processo -->
+        <section id="onde" class="mt-10">
+            <p class="kicker">Primeiro, onde isto se encaixa</p>
+            <div class="prose-editorial mt-4 space-y-4">
+                <p>
+                    Um plano de insolvência é uma proposta feita aos credores: em vez de vender o património para pagar as dívidas (liquidação), o devedor pede para continuar a funcionar e pagar uma parte ao longo do tempo. Para produzir efeitos, um plano tem de passar três portas: ser <strong>admitido pelo Tribunal</strong>, ser <strong>aprovado em assembleia de credores</strong> e ser <strong>homologado por sentença</strong>. Só depois é vinculativo.
+                </p>
+                <p>
+                    Quem vota são os credores, não os sócios. E a aprovação pelos credores não garante a homologação: o juiz pode recusá-la, designadamente se o plano tratar credores de forma desigual sem fundamento objectivo. Sucedeu este ano, em Portugal, a dois planos de clubes já aprovados: à Académica, em 21 de Maio, e ao Estrela da Amadora, em 25 de Junho.
+                </p>
+                <p class="border-l-2 border-bfc-gold pl-4">
+                    À data desta actualização, o plano do Boavista aguarda tramitação. A actividade do Clube continua encerrada desde 15 de Julho e a reabertura depende de decisão do Tribunal e da validação da Administradora de Insolvência.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. O que propõe a cada credor -->
+        <section id="credores" class="mt-12">
+            <div class="section-head">
+                <p class="kicker">O que propõe a cada credor</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-5">Resumo do capítulo 4 do plano ("Proposta de reestruturação e moratória dos créditos"). Todos os prazos contam a partir do trânsito em julgado da sentença de homologação.</p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b-2 border-bfc-black text-left">
+                            <th class="py-2 pr-3 font-sans text-[11px] uppercase tracking-[0.1em]">Credores</th>
+                            <th class="py-2 pr-3 font-sans text-[11px] uppercase tracking-[0.1em]">Capital</th>
+                            <th class="py-2 pr-3 font-sans text-[11px] uppercase tracking-[0.1em]">Prazo</th>
+                            <th class="py-2 font-sans text-[11px] uppercase tracking-[0.1em]">Juros</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-top">
+                        <tr class="border-b border-bfc-line">
+                            <td class="py-3 pr-3">Estado (Finanças)</td>
+                            <td class="py-3 pr-3">100%</td>
+                            <td class="py-3 pr-3">150 prestações mensais (12,5 anos)</td>
+                            <td class="py-3">Propõe-se a redução dos juros vencidos a 20%</td>
+                        </tr>
+                        <tr class="border-b border-bfc-line">
+                            <td class="py-3 pr-3">Segurança Social</td>
+                            <td class="py-3 pr-3">100%</td>
+                            <td class="py-3 pr-3">150 prestações mensais, progressivas nos primeiros 24 meses</td>
+                            <td class="py-3">Vencidos a 20%; vincendos a 4%</td>
+                        </tr>
+                        <tr class="border-b border-bfc-line">
+                            <td class="py-3 pr-3">Trabalhadores</td>
+                            <td class="py-3 pr-3">100%</td>
+                            <td class="py-3 pr-3">48 prestações mensais (4 anos)</td>
+                            <td class="py-3">Perdão total</td>
+                        </tr>
+                        <tr class="border-b border-bfc-line">
+                            <td class="py-3 pr-3">Fornecedores e outros credores comuns</td>
+                            <td class="py-3 pr-3"><strong>25%</strong></td>
+                            <td class="py-3 pr-3"><strong>150 prestações trimestrais (37,5 anos)</strong>, com início no 8.º trimestre</td>
+                            <td class="py-3">Perdão total</td>
+                        </tr>
+                        <tr class="border-b border-bfc-line">
+                            <td class="py-3 pr-3">Credores hipotecários</td>
+                            <td class="py-3 pr-3"><strong>25%</strong></td>
+                            <td class="py-3 pr-3"><strong>150 prestações mensais (12,5 anos)</strong>, com carência de 24 meses</td>
+                            <td class="py-3">Perdão total</td>
+                        </tr>
+                        <tr class="border-b border-bfc-line">
+                            <td class="py-3 pr-3">Créditos subordinados</td>
+                            <td class="py-3 pr-3">0%</td>
+                            <td class="py-3 pr-3">Perdão total</td>
+                            <td class="py-3">Perdão total</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="prose-editorial mt-6 space-y-4">
+                <p>
+                    Dois pontos merecem nota. O primeiro é a diferença de prazo entre credores que recebem a mesma percentagem: fornecedores e hipotecários recebem ambos 25% do capital, mas os primeiros ao longo de 37 anos e meio e os segundos em 12 anos e meio. O plano justifica-o afirmando que os credores hipotecários "são também investidores, permitindo, assim, a viabilidade do clube".
+                </p>
+                <p>
+                    O segundo é o tratamento dos créditos públicos. O capital é proposto a 100%, o que segue o padrão dos planos de clubes portugueses (o próprio Boavista o fez em 2013). Já a redução dos juros vencidos a 20% e o pedido de dispensa de garantia dependem da posição da Autoridade Tributária e da Segurança Social: a lei limita a modificação de créditos fiscais sem o seu acordo.
+                </p>
+                <p>
+                    O plano requer ainda, junto da Autoridade Tributária, a <strong>dispensa da substituição da Direcção</strong> prevista no Código de Procedimento e de Processo Tributário para o pagamento em prestações de dívidas de IVA e retenções, alegando que a manutenção dos actuais titulares "é vital para assegurar a credibilidade da presente recuperação".
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. De onde diz vir o dinheiro -->
+        <section id="receitas" class="mt-12">
+            <div class="section-head">
+                <p class="kicker">De onde diz vir o dinheiro</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-5">Projecções do Anexo I do plano ("Análise Financeira Previsional"), cenário base, para o período 2026-2035.</p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b-2 border-bfc-black text-left">
+                            <th class="py-2 pr-3 font-sans text-[11px] uppercase tracking-[0.1em]">Rubrica</th>
+                            <th class="py-2 pr-3 font-sans text-[11px] uppercase tracking-[0.1em]">2026</th>
+                            <th class="py-2 font-sans text-[11px] uppercase tracking-[0.1em]">2035</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Utilização do estádio</td><td class="py-2.5 pr-3">413.800 €</td><td class="py-2.5">2.348.031 €</td></tr>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Modalidades</td><td class="py-2.5 pr-3">560.000 €</td><td class="py-2.5">1.674.117 €</td></tr>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Licenciamento</td><td class="py-2.5 pr-3">405.000 €</td><td class="py-2.5">480.000 €</td></tr>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Quotizações</td><td class="py-2.5 pr-3">189.000 €</td><td class="py-2.5">411.075 €</td></tr>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Alugueres de espaços</td><td class="py-2.5 pr-3">181.200 €</td><td class="py-2.5">724.800 €</td></tr>
+                        <tr class="border-b-2 border-bfc-black font-bold"><td class="py-2.5 pr-3">Total de rendimentos</td><td class="py-2.5 pr-3">1.749.000 €</td><td class="py-2.5">5.638.023 €</td></tr>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Total de gastos</td><td class="py-2.5 pr-3">1.345.738 €</td><td class="py-2.5">2.370.490 €</td></tr>
+                        <tr class="border-b border-bfc-line"><td class="py-2.5 pr-3">Serviço da dívida</td><td class="py-2.5 pr-3">355.930 €</td><td class="py-2.5">1.855.975 €</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="prose-editorial mt-6 space-y-4">
+                <p>
+                    O plano assenta na exploração comercial do Estádio do Bessa (eventos, concertos, arrendamento de espaços, retalho, licenciamento da marca e direitos de denominação), admitindo a criação de "sociedades-veículo" que fariam essa exploração mediante o pagamento de uma contrapartida ao Clube. Como referências, invoca o modelo de parceria do Santiago Bernabéu e o estádio multiusos do Schalke 04.
+                </p>
+                <p>
+                    Ao confrontar estas projecções com a situação de facto, há elementos que o leitor deve ter presentes: o Estádio do Bessa está interdito pela Autoridade Nacional de Emergência e Protecção Civil desde Agosto de 2025; a actividade do Clube, incluindo as modalidades, está encerrada desde 15 de Julho de 2026; a renovação de quotas está suspensa desde o início de Julho; e o universo apurado de sócios efectivos com plenitude de direitos, na validação de Abril, era de 974.
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. O que o documento não contém -->
+        <section id="lacunas" class="mt-12">
+            <div class="section-head">
+                <p class="kicker">O que o documento não contém</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-5">Não se trata de juízo de valor: são elementos ausentes do texto e dos anexos conhecidos.</p>
+            <div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">O montante total da dívida tratada</p>
+                    <p class="text-sm text-neutral-600 leading-relaxed mt-1">O passivo do processo é noticiado acima dos 150 milhões de euros, mas o documento não indica o valor tratado nem a repartição por credor. Remete para o Anexo II ("Mapa de Credores e Proposta de Tratamento"), que não é conhecido publicamente.</p>
+                </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">Verbas de investimento</p>
+                    <p class="text-sm text-neutral-600 leading-relaxed mt-1">As projecções de gastos para dez anos não incluem qualquer rubrica de investimento, nem uma estimativa do custo das obras necessárias à utilização do estádio ou ao levantamento da interdição, que não é mencionada no documento.</p>
+                </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">A comparação com o cenário de liquidação</p>
+                    <p class="text-sm text-neutral-600 leading-relaxed mt-1">O artigo 195.º do CIRE exige a comparação, quantificada, entre o que os credores recebem com o plano e o que receberiam em liquidação. O documento anuncia essa comparação, mas não apresenta os valores.</p>
+                </div>
+                <div class="rule-thin py-4">
+                    <p class="font-display font-bold text-lg">Os cenários alternativos</p>
+                    <p class="text-sm text-neutral-600 leading-relaxed mt-1">O texto refere que a análise deve contemplar três cenários (prudente, base e optimista) e assume, depois, que apresenta apenas o cenário base.</p>
+                </div>
+                <div class="rule-thin py-4 border-b border-bfc-line">
+                    <p class="font-display font-bold text-lg">O período até à decisão</p>
+                    <p class="text-sm text-neutral-600 leading-relaxed mt-1">Nada é dito sobre como se mantém a actividade das modalidades, que representa cerca de um terço das receitas projectadas, entre o encerramento e uma eventual homologação.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. O que falta acontecer -->
+        <section id="proximos" class="mt-12">
+            <div class="section-head">
+                <p class="kicker">O que falta acontecer</p>
+            </div>
+            <ol class="mt-5 space-y-3 text-[15px] text-neutral-700 leading-relaxed list-decimal pl-5">
+                <li><strong>Admissão pelo Tribunal.</strong> O Juízo de Comércio decide se o plano é admitido nesta fase do processo, que já tinha deliberação de liquidação e vendas de património executadas.</li>
+                <li><strong>Assembleia de credores.</strong> Se admitido, o plano é notificado aos credores e votado. A aprovação exige as maiorias previstas no CIRE.</li>
+                <li><strong>Homologação.</strong> Aprovado, o plano é submetido a sentença de homologação, que pode ser recusada, designadamente por violação de normas aplicáveis ao seu conteúdo.</li>
+                <li><strong>Execução.</strong> Só depois do trânsito em julgado começam a contar os prazos e as carências previstos no documento.</li>
+            </ol>
+            <p class="prose-editorial mt-5">
+                Em paralelo, e sem relação com este plano, corre o processo da Boavista SAD, entidade juridicamente distinta, também em liquidação, com plano próprio e reunião de credores marcada para 11 de Agosto. A distinção entre os dois processos está explicada no <a href="dossier-insolvencias.html" class="underline underline-offset-2 hover:text-bfc-black">dossier das duas insolvências</a>.
+            </p>
+        </section>
+
+        <!-- Documentos -->
+        <section id="documentos-plano" class="mt-12">
+            <div class="section-head">
+                <p class="kicker">Os documentos</p>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 mb-4">Leia por si. O plano é uma peça do processo de insolvência, destinada a ser notificada aos credores e discutida em assembleia.</p>
+            <div class="flex flex-wrap gap-2">
+                <a href="https://idealaxadrezado.pt/content/files/2026/07/plano-insolvencia-bfc.pdf" target="_blank" rel="noopener" class="inline-block text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-black border border-bfc-black px-3 py-1.5 hover:bg-bfc-black hover:text-white transition-colors">Plano (PDF, 31 págs.)</a>
+                <a href="https://idealaxadrezado.pt/content/files/2026/07/anexo-i-analise-financeira.pdf" target="_blank" rel="noopener" class="inline-block text-[11px] font-bold uppercase tracking-[0.14em] text-bfc-black border border-bfc-black px-3 py-1.5 hover:bg-bfc-black hover:text-white transition-colors">Anexo I: análise financeira (PDF)</a>
+                <a href="documentos.html" class="inline-block text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-600 border border-bfc-line px-3 py-1.5 hover:border-bfc-black hover:text-bfc-black transition-colors">Todos os documentos</a>
+            </div>
+        </section>
+
+        <p class="text-sm text-neutral-500 mt-10">
+            Este dossier resume um documento extenso e pode conter imprecisões; a leitura do original prevalece sobre este resumo. Encontrou um erro? Escreva-nos: <a href="mailto:peticao@unidospeloboavista.pt" class="underline underline-offset-2 hover:text-bfc-black">peticao@unidospeloboavista.pt</a>.
+        </p>
+
+    </main>
+
+    <footer class="border-t-2 border-bfc-black mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-600">
+                <a href="index.html" class="hover:text-bfc-black">Início</a>
+                <a href="cronologia.html" class="hover:text-bfc-black">Cronologia</a>
+                <a href="documentos.html" class="hover:text-bfc-black">Documentos</a>
+                <a href="promessas.html" class="hover:text-bfc-black">Promessas</a>
+                <a href="plano-recuperacao.html" class="hover:text-bfc-black">O plano</a>
+                <a href="dossier-insolvencias.html" class="hover:text-bfc-black">Dossier</a>
+                <a href="peticao.html" class="hover:text-bfc-black">Petição (arquivo)</a>
+                <a href="sobre.html" class="hover:text-bfc-black">Sobre</a>
+            </div>
+            <div class="mt-5 pt-5 border-t border-bfc-line">
+                <p class="text-xs text-neutral-500 text-center leading-relaxed max-w-2xl mx-auto">
+                    Iniciativa independente de sócios do Boavista FC. Sem afiliação com o Clube, os seus órgãos sociais, qualquer grupo, facção ou candidatura. Dados de fontes públicas; podem conter erros que aceitamos corrigir.
+                </p>
+            </div>
+        </div>
+        <div class="xadrez" aria-hidden="true"></div>
+    </footer>
+
+    <script>
+        (function() {
+            var btn = document.getElementById('nav-toggle');
+            var nav = document.getElementById('mobile-nav');
+            if (!btn || !nav) return;
+            btn.addEventListener('click', function() {
+                var open = !nav.classList.contains('hidden');
+                if (open) { nav.classList.add('hidden'); btn.setAttribute('aria-expanded','false'); }
+                else { nav.classList.remove('hidden'); btn.setAttribute('aria-expanded','true'); }
+            });
+        })();
+    </script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "483b5e84aa97427e8d6fd98247aca30a"}'></script>
+</body>
+</html>
