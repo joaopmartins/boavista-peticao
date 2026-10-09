@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-09-04",
+  "atualizado": "2026-10-07",
   "eventos": [
     {
       "data": "2025-01-18",
@@ -408,6 +408,18 @@
       "tipo": "sad",
       "titulo": "Credores rejeitam o plano e aprovam a liquidação da Boavista SAD",
       "descricao": "No Juízo de Comércio de Vila Nova de Gaia, a assembleia de credores da Boavista SAD, iniciada a 11 de Agosto e retomada depois de suspensa, rejeita o último plano de recuperação e aprova a liquidação da sociedade. O plano previa reduzir a SAD ao mínimo, com apenas uma equipa de sub-19 na 2.ª divisão da AF Porto, escalão em que a sociedade nem chegou a inscrever-se. O tribunal já decretara a liquidação em Maio; a votação dos credores fecha a porta à via do futebol profissional. O presidente Rui Garrido Pereira lamentou 'uma perda de mais de nove milhões de euros de dívida'; a SAD arrasta um passivo superior a 150 milhões. Trata-se da insolvência da SAD, entidade distinta do Clube, que em Agosto foi autorizado a retomar a actividade. Fontes: Renascença, Record, Maisfutebol, 3 de Setembro de 2026."
+    },
+    {
+      "data": "2026-10-07",
+      "titulo": "Credores chumbam o plano de recuperação do Clube",
+      "descricao": "Na assembleia de credores do Boavista Futebol Clube, no Juízo de Comércio de Vila Nova de Gaia, o plano de recuperação apresentado pela Direcção é rejeitado, por não reunir os votos necessários. Segundo a imprensa, pesou a posição dos principais credores, entre os quais os hipotecários, precisamente a classe que o documento procurava distinguir, por os considerar 'também investidores'. A Direcção anuncia que pretende apresentar um novo plano até ao fim de Outubro. O Panteras Negras Footballers Club, da claque, avisa que a rejeição abre caminho à liquidação do Clube e à cessação das actividades desportivas. É a insolvência do Clube, distinta da SAD, cuja liquidação os credores já tinham aprovado a 3 de Setembro. Fontes: O Jogo, A Bola, Jornal de Notícias, Maisfutebol, 7 de Outubro de 2026.",
+      "tipo": "governanca"
+    },
+    {
+      "data": "2026-10-07",
+      "titulo": "Credores aprovam a venda do Estádio do Bessa por 33 milhões à família Maurício",
+      "descricao": "Na mesma assembleia de credores do Clube, é aprovada a proposta de compra do Estádio do Bessa e do complexo desportivo por 33 milhões de euros, apresentada pelo grupo Confrasilvas, liderado por Jorge Silva Maurício (a chamada 'família Maurício'), através da empresa Frozenspark e da leiloeira Leilosoc. O valor supera o mínimo exigido pelos credores, de 32,9 milhões. No leilão anterior, a melhor das doze licitações ficara em 25,7 milhões, abaixo do mínimo então fixado. Fontes: O Jogo, A Bola, Jornal de Notícias, Record, 7 de Outubro de 2026.",
+      "tipo": "estadio"
     }
   ]
 }
